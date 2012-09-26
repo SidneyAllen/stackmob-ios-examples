@@ -1,0 +1,395 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DE00A1F8161389AD00B1D5A9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE00A1F7161389AD00B1D5A9 /* UIKit.framework */; };
+		DE00A1FA161389AD00B1D5A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE00A1F9161389AD00B1D5A9 /* Foundation.framework */; };
+		DE00A1FC161389AD00B1D5A9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE00A1FB161389AD00B1D5A9 /* CoreGraphics.framework */; };
+		DE00A202161389AD00B1D5A9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DE00A200161389AD00B1D5A9 /* InfoPlist.strings */; };
+		DE00A204161389AD00B1D5A9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DE00A203161389AD00B1D5A9 /* main.m */; };
+		DE00A208161389AD00B1D5A9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE00A207161389AD00B1D5A9 /* AppDelegate.m */; };
+		DE00A20B161389AD00B1D5A9 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE00A209161389AD00B1D5A9 /* MainStoryboard.storyboard */; };
+		DE00A20E161389AD00B1D5A9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE00A20D161389AD00B1D5A9 /* ViewController.m */; };
+		DE00A215161389E200B1D5A9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE00A214161389E200B1D5A9 /* CoreData.framework */; };
+		DE00A23D161389F100B1D5A9 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = DE00A217161389F100B1D5A9 /* CHANGELOG.md */; };
+		DE00A23E161389F100B1D5A9 /* libstackmob-v1.0.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE00A23C161389F100B1D5A9 /* libstackmob-v1.0.0.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DE00A1F3161389AD00B1D5A9 /* datastore-crud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "datastore-crud.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE00A1F7161389AD00B1D5A9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DE00A1F9161389AD00B1D5A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DE00A1FB161389AD00B1D5A9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DE00A1FF161389AD00B1D5A9 /* datastore-crud-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "datastore-crud-Info.plist"; sourceTree = "<group>"; };
+		DE00A201161389AD00B1D5A9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DE00A203161389AD00B1D5A9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DE00A205161389AD00B1D5A9 /* datastore-crud-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "datastore-crud-Prefix.pch"; sourceTree = "<group>"; };
+		DE00A206161389AD00B1D5A9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DE00A207161389AD00B1D5A9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DE00A20A161389AD00B1D5A9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		DE00A20C161389AD00B1D5A9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DE00A20D161389AD00B1D5A9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DE00A214161389E200B1D5A9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		DE00A217161389F100B1D5A9 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGELOG.md; sourceTree = "<group>"; };
+		DE00A219161389F100B1D5A9 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
+		DE00A21A161389F100B1D5A9 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		DE00A21B161389F100B1D5A9 /* AFImageRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageRequestOperation.h; sourceTree = "<group>"; };
+		DE00A21C161389F100B1D5A9 /* AFJSONRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONRequestOperation.h; sourceTree = "<group>"; };
+		DE00A21D161389F100B1D5A9 /* AFJSONUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONUtilities.h; sourceTree = "<group>"; };
+		DE00A21E161389F100B1D5A9 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		DE00A21F161389F100B1D5A9 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		DE00A220161389F100B1D5A9 /* AFPropertyListRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPropertyListRequestOperation.h; sourceTree = "<group>"; };
+		DE00A221161389F100B1D5A9 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		DE00A222161389F100B1D5A9 /* AFXMLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFXMLRequestOperation.h; sourceTree = "<group>"; };
+		DE00A223161389F100B1D5A9 /* Base64EncodedStringFromData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64EncodedStringFromData.h; sourceTree = "<group>"; };
+		DE00A224161389F100B1D5A9 /* NSArray+Enumerable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Enumerable.h"; sourceTree = "<group>"; };
+		DE00A225161389F100B1D5A9 /* NSDictionary+AtomicCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+AtomicCounter.h"; sourceTree = "<group>"; };
+		DE00A226161389F100B1D5A9 /* NSEntityDescription+StackMobSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSEntityDescription+StackMobSerialization.h"; sourceTree = "<group>"; };
+		DE00A227161389F100B1D5A9 /* NSManagedObject+StackMobSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+StackMobSerialization.h"; sourceTree = "<group>"; };
+		DE00A228161389F100B1D5A9 /* SMBinaryDataConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMBinaryDataConversion.h; sourceTree = "<group>"; };
+		DE00A229161389F100B1D5A9 /* SMClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMClient.h; sourceTree = "<group>"; };
+		DE00A22A161389F100B1D5A9 /* SMCoreDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCoreDataStore.h; sourceTree = "<group>"; };
+		DE00A22B161389F100B1D5A9 /* SMCustomCodeRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCustomCodeRequest.h; sourceTree = "<group>"; };
+		DE00A22C161389F100B1D5A9 /* SMDataStore+Protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SMDataStore+Protected.h"; sourceTree = "<group>"; };
+		DE00A22D161389F100B1D5A9 /* SMDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMDataStore.h; sourceTree = "<group>"; };
+		DE00A22E161389F100B1D5A9 /* SMError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMError.h; sourceTree = "<group>"; };
+		DE00A22F161389F100B1D5A9 /* SMIncrementalStore+Query.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SMIncrementalStore+Query.h"; sourceTree = "<group>"; };
+		DE00A230161389F100B1D5A9 /* SMIncrementalStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMIncrementalStore.h; sourceTree = "<group>"; };
+		DE00A231161389F100B1D5A9 /* SMJSONRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMJSONRequestOperation.h; sourceTree = "<group>"; };
+		DE00A232161389F100B1D5A9 /* SMModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMModel.h; sourceTree = "<group>"; };
+		DE00A233161389F100B1D5A9 /* SMOAuth2Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMOAuth2Client.h; sourceTree = "<group>"; };
+		DE00A234161389F100B1D5A9 /* SMQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMQuery.h; sourceTree = "<group>"; };
+		DE00A235161389F100B1D5A9 /* SMRequestOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMRequestOptions.h; sourceTree = "<group>"; };
+		DE00A236161389F100B1D5A9 /* SMResponseBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMResponseBlocks.h; sourceTree = "<group>"; };
+		DE00A237161389F100B1D5A9 /* SMUserSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMUserSession.h; sourceTree = "<group>"; };
+		DE00A238161389F100B1D5A9 /* SMVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMVersion.h; sourceTree = "<group>"; };
+		DE00A239161389F100B1D5A9 /* StackMob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackMob.h; sourceTree = "<group>"; };
+		DE00A23A161389F100B1D5A9 /* Synchronization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Synchronization.h; sourceTree = "<group>"; };
+		DE00A23B161389F100B1D5A9 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		DE00A23C161389F100B1D5A9 /* libstackmob-v1.0.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libstackmob-v1.0.0.a"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DE00A1F0161389AD00B1D5A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE00A215161389E200B1D5A9 /* CoreData.framework in Frameworks */,
+				DE00A1F8161389AD00B1D5A9 /* UIKit.framework in Frameworks */,
+				DE00A1FA161389AD00B1D5A9 /* Foundation.framework in Frameworks */,
+				DE00A1FC161389AD00B1D5A9 /* CoreGraphics.framework in Frameworks */,
+				DE00A23E161389F100B1D5A9 /* libstackmob-v1.0.0.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DE00A1E8161389AD00B1D5A9 = {
+			isa = PBXGroup;
+			children = (
+				DE00A216161389F100B1D5A9 /* StackMob-v1.0.0 */,
+				DE00A214161389E200B1D5A9 /* CoreData.framework */,
+				DE00A1FD161389AD00B1D5A9 /* datastore-crud */,
+				DE00A1F6161389AD00B1D5A9 /* Frameworks */,
+				DE00A1F4161389AD00B1D5A9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DE00A1F4161389AD00B1D5A9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DE00A1F3161389AD00B1D5A9 /* datastore-crud.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DE00A1F6161389AD00B1D5A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DE00A1F7161389AD00B1D5A9 /* UIKit.framework */,
+				DE00A1F9161389AD00B1D5A9 /* Foundation.framework */,
+				DE00A1FB161389AD00B1D5A9 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DE00A1FD161389AD00B1D5A9 /* datastore-crud */ = {
+			isa = PBXGroup;
+			children = (
+				DE00A206161389AD00B1D5A9 /* AppDelegate.h */,
+				DE00A207161389AD00B1D5A9 /* AppDelegate.m */,
+				DE00A209161389AD00B1D5A9 /* MainStoryboard.storyboard */,
+				DE00A20C161389AD00B1D5A9 /* ViewController.h */,
+				DE00A20D161389AD00B1D5A9 /* ViewController.m */,
+				DE00A1FE161389AD00B1D5A9 /* Supporting Files */,
+			);
+			path = "datastore-crud";
+			sourceTree = "<group>";
+		};
+		DE00A1FE161389AD00B1D5A9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DE00A1FF161389AD00B1D5A9 /* datastore-crud-Info.plist */,
+				DE00A200161389AD00B1D5A9 /* InfoPlist.strings */,
+				DE00A203161389AD00B1D5A9 /* main.m */,
+				DE00A205161389AD00B1D5A9 /* datastore-crud-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DE00A216161389F100B1D5A9 /* StackMob-v1.0.0 */ = {
+			isa = PBXGroup;
+			children = (
+				DE00A217161389F100B1D5A9 /* CHANGELOG.md */,
+				DE00A218161389F100B1D5A9 /* Headers */,
+				DE00A23C161389F100B1D5A9 /* libstackmob-v1.0.0.a */,
+			);
+			name = "StackMob-v1.0.0";
+			path = "../../stackmob-ios-sdk/build/1.0.0/StackMob-v1.0.0";
+			sourceTree = "<group>";
+		};
+		DE00A218161389F100B1D5A9 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				DE00A219161389F100B1D5A9 /* AFHTTPClient.h */,
+				DE00A21A161389F100B1D5A9 /* AFHTTPRequestOperation.h */,
+				DE00A21B161389F100B1D5A9 /* AFImageRequestOperation.h */,
+				DE00A21C161389F100B1D5A9 /* AFJSONRequestOperation.h */,
+				DE00A21D161389F100B1D5A9 /* AFJSONUtilities.h */,
+				DE00A21E161389F100B1D5A9 /* AFNetworkActivityIndicatorManager.h */,
+				DE00A21F161389F100B1D5A9 /* AFNetworking.h */,
+				DE00A220161389F100B1D5A9 /* AFPropertyListRequestOperation.h */,
+				DE00A221161389F100B1D5A9 /* AFURLConnectionOperation.h */,
+				DE00A222161389F100B1D5A9 /* AFXMLRequestOperation.h */,
+				DE00A223161389F100B1D5A9 /* Base64EncodedStringFromData.h */,
+				DE00A224161389F100B1D5A9 /* NSArray+Enumerable.h */,
+				DE00A225161389F100B1D5A9 /* NSDictionary+AtomicCounter.h */,
+				DE00A226161389F100B1D5A9 /* NSEntityDescription+StackMobSerialization.h */,
+				DE00A227161389F100B1D5A9 /* NSManagedObject+StackMobSerialization.h */,
+				DE00A228161389F100B1D5A9 /* SMBinaryDataConversion.h */,
+				DE00A229161389F100B1D5A9 /* SMClient.h */,
+				DE00A22A161389F100B1D5A9 /* SMCoreDataStore.h */,
+				DE00A22B161389F100B1D5A9 /* SMCustomCodeRequest.h */,
+				DE00A22C161389F100B1D5A9 /* SMDataStore+Protected.h */,
+				DE00A22D161389F100B1D5A9 /* SMDataStore.h */,
+				DE00A22E161389F100B1D5A9 /* SMError.h */,
+				DE00A22F161389F100B1D5A9 /* SMIncrementalStore+Query.h */,
+				DE00A230161389F100B1D5A9 /* SMIncrementalStore.h */,
+				DE00A231161389F100B1D5A9 /* SMJSONRequestOperation.h */,
+				DE00A232161389F100B1D5A9 /* SMModel.h */,
+				DE00A233161389F100B1D5A9 /* SMOAuth2Client.h */,
+				DE00A234161389F100B1D5A9 /* SMQuery.h */,
+				DE00A235161389F100B1D5A9 /* SMRequestOptions.h */,
+				DE00A236161389F100B1D5A9 /* SMResponseBlocks.h */,
+				DE00A237161389F100B1D5A9 /* SMUserSession.h */,
+				DE00A238161389F100B1D5A9 /* SMVersion.h */,
+				DE00A239161389F100B1D5A9 /* StackMob.h */,
+				DE00A23A161389F100B1D5A9 /* Synchronization.h */,
+				DE00A23B161389F100B1D5A9 /* UIImageView+AFNetworking.h */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DE00A1F2161389AD00B1D5A9 /* datastore-crud */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE00A211161389AD00B1D5A9 /* Build configuration list for PBXNativeTarget "datastore-crud" */;
+			buildPhases = (
+				DE00A1EF161389AD00B1D5A9 /* Sources */,
+				DE00A1F0161389AD00B1D5A9 /* Frameworks */,
+				DE00A1F1161389AD00B1D5A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "datastore-crud";
+			productName = "datastore-crud";
+			productReference = DE00A1F3161389AD00B1D5A9 /* datastore-crud.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DE00A1EA161389AD00B1D5A9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = StackMob;
+			};
+			buildConfigurationList = DE00A1ED161389AD00B1D5A9 /* Build configuration list for PBXProject "datastore-crud" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DE00A1E8161389AD00B1D5A9;
+			productRefGroup = DE00A1F4161389AD00B1D5A9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DE00A1F2161389AD00B1D5A9 /* datastore-crud */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DE00A1F1161389AD00B1D5A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE00A202161389AD00B1D5A9 /* InfoPlist.strings in Resources */,
+				DE00A20B161389AD00B1D5A9 /* MainStoryboard.storyboard in Resources */,
+				DE00A23D161389F100B1D5A9 /* CHANGELOG.md in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DE00A1EF161389AD00B1D5A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE00A204161389AD00B1D5A9 /* main.m in Sources */,
+				DE00A208161389AD00B1D5A9 /* AppDelegate.m in Sources */,
+				DE00A20E161389AD00B1D5A9 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DE00A200161389AD00B1D5A9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE00A201161389AD00B1D5A9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DE00A209161389AD00B1D5A9 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE00A20A161389AD00B1D5A9 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DE00A20F161389AD00B1D5A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DE00A210161389AD00B1D5A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DE00A212161389AD00B1D5A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "datastore-crud/datastore-crud-Prefix.pch";
+				INFOPLIST_FILE = "datastore-crud/datastore-crud-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../stackmob-ios-sdk/build/1.0.0/StackMob-v1.0.0\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DE00A213161389AD00B1D5A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "datastore-crud/datastore-crud-Prefix.pch";
+				INFOPLIST_FILE = "datastore-crud/datastore-crud-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../stackmob-ios-sdk/build/1.0.0/StackMob-v1.0.0\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DE00A1ED161389AD00B1D5A9 /* Build configuration list for PBXProject "datastore-crud" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE00A20F161389AD00B1D5A9 /* Debug */,
+				DE00A210161389AD00B1D5A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE00A211161389AD00B1D5A9 /* Build configuration list for PBXNativeTarget "datastore-crud" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE00A212161389AD00B1D5A9 /* Debug */,
+				DE00A213161389AD00B1D5A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DE00A1EA161389AD00B1D5A9 /* Project object */;
+}
