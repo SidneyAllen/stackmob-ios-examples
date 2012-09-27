@@ -16,7 +16,7 @@
 		1F18AE6D15EE764E004E4933 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F18AE6B15EE764E004E4933 /* MainStoryboard.storyboard */; };
 		1F18AE7015EE764E004E4933 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F18AE6F15EE764E004E4933 /* ViewController.m */; };
 		1F18AE9D15EE765A004E4933 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = 1F18AE7715EE765A004E4933 /* CHANGELOG.md */; };
-		1F18AE9E15EE765A004E4933 /* libstackmob-v1.0.0beta.3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F18AE9C15EE765A004E4933 /* libstackmob-v1.0.0beta.3.a */; };
+		1F18AE9E15EE765A004E4933 /* libstackmob-v1.0.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F18AE9C15EE765A004E4933 /* libstackmob-v1.0.0.a */; };
 		1F18AEA015EE7665004E4933 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F18AE9F15EE7665004E4933 /* CoreData.framework */; };
 		1F18AEB015EE78AD004E4933 /* mydatamodel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1F18AEAE15EE78AD004E4933 /* mydatamodel.xcdatamodeld */; };
 		1F2275EC15F6D5BB00E49F81 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2275EB15F6D5BB00E49F81 /* Category.m */; };
@@ -73,7 +73,7 @@
 		1F18AE9915EE765A004E4933 /* StackMob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackMob.h; sourceTree = "<group>"; };
 		1F18AE9A15EE765A004E4933 /* Synchronization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Synchronization.h; sourceTree = "<group>"; };
 		1F18AE9B15EE765A004E4933 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
-		1F18AE9C15EE765A004E4933 /* libstackmob-v1.0.0beta.3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libstackmob-v1.0.0beta.3.a"; sourceTree = "<group>"; };
+		1F18AE9C15EE765A004E4933 /* libstackmob-v1.0.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libstackmob-v1.0.0.a"; sourceTree = "<group>"; };
 		1F18AE9F15EE7665004E4933 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		1F18AEAF15EE78AD004E4933 /* mydatamodel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mydatamodel.xcdatamodel; sourceTree = "<group>"; };
 		1F2275EA15F6D5BB00E49F81 /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
@@ -91,7 +91,7 @@
 				1F18AE5A15EE764E004E4933 /* UIKit.framework in Frameworks */,
 				1F18AE5C15EE764E004E4933 /* Foundation.framework in Frameworks */,
 				1F18AE5E15EE764E004E4933 /* CoreGraphics.framework in Frameworks */,
-				1F18AE9E15EE765A004E4933 /* libstackmob-v1.0.0beta.3.a in Frameworks */,
+				1F18AE9E15EE765A004E4933 /* libstackmob-v1.0.0.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,7 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				1F18AE9F15EE7665004E4933 /* CoreData.framework */,
-				1F18AE7615EE765A004E4933 /* StackMob-v1.0.0beta.3 */,
+				1F18AE7615EE765A004E4933 /* StackMob-v1.0.0 */,
 				1F18AE5F15EE764E004E4933 /* sample-app */,
 				1F18AE5815EE764E004E4933 /* Frameworks */,
 				1F18AE5615EE764E004E4933 /* Products */,
@@ -156,14 +156,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		1F18AE7615EE765A004E4933 /* StackMob-v1.0.0beta.3 */ = {
+		1F18AE7615EE765A004E4933 /* StackMob-v1.0.0 */ = {
 			isa = PBXGroup;
 			children = (
 				1F18AE7715EE765A004E4933 /* CHANGELOG.md */,
 				1F18AE7815EE765A004E4933 /* Headers */,
-				1F18AE9C15EE765A004E4933 /* libstackmob-v1.0.0beta.3.a */,
+				1F18AE9C15EE765A004E4933 /* libstackmob-v1.0.0.a */,
 			);
-			path = "StackMob-v1.0.0beta.3";
+			path = "StackMob-v1.0.0";
 			sourceTree = "<group>";
 		};
 		1F18AE7815EE765A004E4933 /* Headers */ = {
@@ -360,7 +360,7 @@
 				INFOPLIST_FILE = "sample-app/relationship-one-to-many-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/StackMob-v1.0.0beta.3\"",
+					"\"$(SRCROOT)/StackMob-v1.0.0\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "relationship-one-to-many";
@@ -376,7 +376,7 @@
 				INFOPLIST_FILE = "sample-app/relationship-one-to-many-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/StackMob-v1.0.0beta.3\"",
+					"\"$(SRCROOT)/StackMob-v1.0.0\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "relationship-one-to-many";
