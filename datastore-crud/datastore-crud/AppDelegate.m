@@ -2,7 +2,7 @@
 //  AppDelegate.m
 //  datastore-crud
 //
-//  Created by Matt Vaznaian on 9/26/12.
+//  Created by Matt Vaznaian on 9/30/12.
 //  Copyright (c) 2012 StackMob. All rights reserved.
 //
 
@@ -16,7 +16,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    self.client = [[SMClient alloc] initWithAPIVersion:@"0" publicKey:@"PUBLIC_KEY"];
+    self.client = [[SMClient alloc] initWithAPIVersion:@"0" publicKey:@"YOUR_PUBLIC_KEY"];
     return YES;
 }
 							

@@ -2,7 +2,7 @@
 //  AppDelegate.h
 //  datastore-crud
 //
-//  Created by Matt Vaznaian on 9/26/12.
+//  Created by Matt Vaznaian on 9/30/12.
 //  Copyright (c) 2012 StackMob. All rights reserved.
 //
 

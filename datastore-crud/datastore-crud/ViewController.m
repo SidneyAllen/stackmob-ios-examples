@@ -2,7 +2,7 @@
 //  ViewController.m
 //  datastore-crud
 //
-//  Created by Matt Vaznaian on 9/26/12.
+//  Created by Matt Vaznaian on 9/30/12.
 //  Copyright (c) 2012 StackMob. All rights reserved.
 //
 
@@ -16,7 +16,7 @@
 
 @implementation ViewController
 @synthesize myTextField;
-@synthesize myObjectId;
+@synthesize myObjectId = _myObjectId;
 
 - (AppDelegate *)appDelegate
 {
@@ -26,7 +26,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    myObjectId = nil;
+    self.myObjectId = nil;
+    self.myTextField.delegate = self;
+    
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -48,45 +50,49 @@
     return YES;
 }
 
-- (IBAction)create:(id)sender {
+- (IBAction)createObject:(id)sender {
     
     NSDictionary *arguments = [NSDictionary dictionaryWithObject:[myTextField text] forKey:@"name"];
     
     [[[SMClient defaultClient] dataStore] createObject:arguments inSchema:@"todo" onSuccess:^(NSDictionary *theObject, NSString *schema) {
         NSLog(@"Created object %@ in schema %@", theObject, schema);
-        myObjectId = [theObject objectForKey:@"todo_id"];
+        self.myObjectId = [theObject objectForKey:@"todo_id"];
     } onFailure:^(NSError *theError, NSDictionary *theObject, NSString *schema) {
         NSLog(@"Error creating object: %@", theError);
     }];
+    
 }
 
-- (IBAction)read:(id)sender {
+- (IBAction)readObject:(id)sender {
     
-    [[[SMClient defaultClient] dataStore] readObjectWithId:myObjectId inSchema:@"todo" onSuccess:^(NSDictionary *theObject, NSString *schema) {
+    [[[SMClient defaultClient] dataStore] readObjectWithId:self.myObjectId inSchema:@"todo" onSuccess:^(NSDictionary *theObject, NSString *schema) {
         NSLog(@"Result of read is %@", theObject);
     } onFailure:^(NSError *theError, NSString *theObjectId, NSString *schema) {
         NSLog(@"Error reading object: %@", theError);
     }];
+    
 }
 
-- (IBAction)update:(id)sender {
+- (IBAction)updateObject:(id)sender {
     
     NSDictionary *arguments = [NSDictionary dictionaryWithObject:[myTextField text] forKey:@"name"];
     
-    [[[SMClient defaultClient] dataStore] updateObjectWithId:myObjectId inSchema:@"todo" update:arguments onSuccess:^(NSDictionary *theObject, NSString *schema) {
+    [[[SMClient defaultClient] dataStore] updateObjectWithId:self.myObjectId inSchema:@"todo" update:arguments onSuccess:^(NSDictionary *theObject, NSString *schema) {
         NSLog(@"Result of update is %@", theObject);
     } onFailure:^(NSError *theError, NSDictionary *theObject, NSString *schema) {
         NSLog(@"Error updating object: %@", theError);
     }];
+    
 }
 
-- (IBAction)delete:(id)sender {
+- (IBAction)deleteObject:(id)sender {
     
-    [[[SMClient defaultClient] dataStore] deleteObjectId:myObjectId inSchema:@"todo" onSuccess:^(NSString *theObjectId, NSString *schema) {
+    [[[SMClient defaultClient] dataStore] deleteObjectId:self.myObjectId inSchema:@"todo" onSuccess:^(NSString *theObjectId, NSString *schema) {
         NSLog(@"Deleted object %@", theObjectId);
-        myObjectId = nil;
+        self.myObjectId = nil;
     } onFailure:^(NSError *theError, NSString *theObjectId, NSString *schema) {
         NSLog(@"Error deleting object: %@", theError);
     }];
+    
 }
 @end
