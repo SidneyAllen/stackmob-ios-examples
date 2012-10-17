@@ -11,9 +11,7 @@
 @interface ViewController : UIViewController <UITextFieldDelegate>
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-
 @property (weak, nonatomic) IBOutlet UITextField *usernameField;
-
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
 
 - (IBAction)createUser:(id)sender;

@@ -8,12 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
-#import "SMModel.h"
+#import "StackMob.h"
 
 
-@interface User : NSManagedObject <SMModel>
+@interface User : SMUserManagedObject
 
 @property (nonatomic, retain) NSString * username;
-@property (nonatomic, retain) NSString * password;
+
+- (id)initIntoManagedObjectContext:(NSManagedObjectContext *)context;
 
 @end

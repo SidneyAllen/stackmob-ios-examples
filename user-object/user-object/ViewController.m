@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "AppDelegate.h"
 #import "StackMob.h"
+#import "User.h"
 
 @interface ViewController ()
 
@@ -57,13 +58,15 @@
 
 - (IBAction)createUser:(id)sender {
     
-    NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:self.managedObjectContext];
+    User *newUser = [[User alloc] initIntoManagedObjectContext:[self.appDelegate managedObjectContext]];
     
-    [newManagedObject setValue:self.usernameField.text forKey:[newManagedObject sm_primaryKeyField]];
-    [newManagedObject setValue:self.passwordField.text forKey:@"password"];
+    [newUser setValue:self.usernameField.text forKey:[newUser sm_primaryKeyField]];
+    [newUser setPassword:self.passwordField.text];
     
     NSError *error = nil;
     if (![self.managedObjectContext save:&error]) {
+        [self.managedObjectContext deleteObject:newUser];
+        [newUser removePassword];
         NSLog(@"There was an error! %@", error);
     }
     else {

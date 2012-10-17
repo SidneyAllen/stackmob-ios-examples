@@ -18,7 +18,9 @@
 		DE4BCB871616392E003F4A66 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4BCB861616392E003F4A66 /* CoreData.framework */; };
 		DE4BCB8A16163987003F4A66 /* mydatamodel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE4BCB8816163987003F4A66 /* mydatamodel.xcdatamodeld */; };
 		DE4BCBB2161639D4003F4A66 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = DE4BCB8C161639D4003F4A66 /* CHANGELOG.md */; };
-		DE4BCBB3161639D4003F4A66 /* libstackmob-v1.0.1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4BCBB1161639D4003F4A66 /* libstackmob-v1.0.1.a */; };
+		DE4BCBB3161639D4003F4A66 /* libstackmob-v1.1.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4BCBB1161639D4003F4A66 /* libstackmob-v1.1.0.a */; };
+		DEE5C483162F36DD0024001B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DEE5C482162F36DD0024001B /* Default-568h@2x.png */; };
+		DEE5C486162F36E50024001B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE5C485162F36E50024001B /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,7 +75,9 @@
 		DE4BCBAE161639D4003F4A66 /* StackMob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackMob.h; sourceTree = "<group>"; };
 		DE4BCBAF161639D4003F4A66 /* Synchronization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Synchronization.h; sourceTree = "<group>"; };
 		DE4BCBB0161639D4003F4A66 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
-		DE4BCBB1161639D4003F4A66 /* libstackmob-v1.0.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libstackmob-v1.0.1.a"; sourceTree = "<group>"; };
+		DE4BCBB1161639D4003F4A66 /* libstackmob-v1.1.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libstackmob-v1.1.0.a"; sourceTree = "<group>"; };
+		DEE5C482162F36DD0024001B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		DEE5C485162F36E50024001B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,11 +85,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEE5C486162F36E50024001B /* Security.framework in Frameworks */,
 				DE4BCB871616392E003F4A66 /* CoreData.framework in Frameworks */,
 				DE4BCB68161638D4003F4A66 /* UIKit.framework in Frameworks */,
 				DE4BCB6A161638D4003F4A66 /* Foundation.framework in Frameworks */,
 				DE4BCB6C161638D4003F4A66 /* CoreGraphics.framework in Frameworks */,
-				DE4BCBB3161639D4003F4A66 /* libstackmob-v1.0.1.a in Frameworks */,
+				DE4BCBB3161639D4003F4A66 /* libstackmob-v1.1.0.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,7 +100,7 @@
 		DE4BCB58161638D4003F4A66 = {
 			isa = PBXGroup;
 			children = (
-				DE4BCB8B161639D4003F4A66 /* StackMob-v1.0.1 */,
+				DE4BCB8B161639D4003F4A66 /* StackMob-v1.1.0 */,
 				DE4BCB6D161638D4003F4A66 /* read */,
 				DE4BCB66161638D4003F4A66 /* Frameworks */,
 				DE4BCB64161638D4003F4A66 /* Products */,
@@ -113,6 +118,7 @@
 		DE4BCB66161638D4003F4A66 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DEE5C485162F36E50024001B /* Security.framework */,
 				DE4BCB861616392E003F4A66 /* CoreData.framework */,
 				DE4BCB67161638D4003F4A66 /* UIKit.framework */,
 				DE4BCB69161638D4003F4A66 /* Foundation.framework */,
@@ -132,12 +138,13 @@
 				DE4BCB6E161638D4003F4A66 /* Supporting Files */,
 				DE4BCB8816163987003F4A66 /* mydatamodel.xcdatamodeld */,
 			);
-			path = "read";
+			path = read;
 			sourceTree = "<group>";
 		};
 		DE4BCB6E161638D4003F4A66 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DEE5C482162F36DD0024001B /* Default-568h@2x.png */,
 				DE4BCB6F161638D4003F4A66 /* read-Info.plist */,
 				DE4BCB70161638D4003F4A66 /* InfoPlist.strings */,
 				DE4BCB73161638D4003F4A66 /* main.m */,
@@ -146,14 +153,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		DE4BCB8B161639D4003F4A66 /* StackMob-v1.0.1 */ = {
+		DE4BCB8B161639D4003F4A66 /* StackMob-v1.1.0 */ = {
 			isa = PBXGroup;
 			children = (
 				DE4BCB8C161639D4003F4A66 /* CHANGELOG.md */,
 				DE4BCB8D161639D4003F4A66 /* Headers */,
-				DE4BCBB1161639D4003F4A66 /* libstackmob-v1.0.1.a */,
+				DE4BCBB1161639D4003F4A66 /* libstackmob-v1.1.0.a */,
 			);
-			path = "StackMob-v1.0.1";
+			path = "StackMob-v1.1.0";
 			sourceTree = "<group>";
 		};
 		DE4BCB8D161639D4003F4A66 /* Headers */ = {
@@ -214,7 +221,7 @@
 			dependencies = (
 			);
 			name = read;
-			productName = "read";
+			productName = read;
 			productReference = DE4BCB63161638D4003F4A66 /* read.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -252,6 +259,7 @@
 				DE4BCB72161638D4003F4A66 /* InfoPlist.strings in Resources */,
 				DE4BCB7B161638D4003F4A66 /* MainStoryboard.storyboard in Resources */,
 				DE4BCBB2161639D4003F4A66 /* CHANGELOG.md in Resources */,
+				DEE5C483162F36DD0024001B /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,7 +356,7 @@
 				INFOPLIST_FILE = "read/read-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/StackMob-v1.0.1\"",
+					"\"$(SRCROOT)/StackMob-v1.1.0\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = read;
@@ -364,7 +372,7 @@
 				INFOPLIST_FILE = "read/read-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/StackMob-v1.0.1\"",
+					"\"$(SRCROOT)/StackMob-v1.1.0\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = read;
