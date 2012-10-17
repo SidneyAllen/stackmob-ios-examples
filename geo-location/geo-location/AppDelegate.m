@@ -17,7 +17,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    self.client = [[SMClient alloc] initWithAPIVersion:@"0" publicKey:@"16562c4a-ef32-44b1-8422-eca912adc211"];
+    self.client = [[SMClient alloc] initWithAPIVersion:@"0" publicKey:@"YOUR_PUBLIC_KEY"];
     SMCoreDataStore *coreDataStore = [self.client coreDataStoreWithManagedObjectModel:self.managedObjectModel];
     self.managedObjectContext = [coreDataStore managedObjectContext];
     return YES;
