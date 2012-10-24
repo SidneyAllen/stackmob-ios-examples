@@ -56,7 +56,7 @@
     NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:@"Todo" inManagedObjectContext:self.managedObjectContext];
     
     [newManagedObject setValue:self.titleField.text forKey:@"title"];
-    [newManagedObject setValue:[newManagedObject sm_assignObjectId] forKey:[newManagedObject sm_primaryKeyField]];
+    [newManagedObject setValue:[newManagedObject assignObjectId] forKey:[newManagedObject primaryKeyField]];
     
     NSError *error = nil;
     if (![self.managedObjectContext save:&error]) {

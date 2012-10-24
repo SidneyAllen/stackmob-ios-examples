@@ -10,13 +10,10 @@
 #import "StackMob.h"
 
 @interface ViewController : UIViewController <UITextFieldDelegate>
-{
-    NSManagedObject *aManagedObject;
-}
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-
 @property (weak, nonatomic) IBOutlet UITextField *titleField;
+@property (strong, nonatomic) NSString *todoId;
 
 - (IBAction)updateObject:(id)sender;
 

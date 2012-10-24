@@ -35,12 +35,12 @@
     Todo *newTodo = [NSEntityDescription insertNewObjectForEntityForName:@"Todo" inManagedObjectContext:self.managedObjectContext];
     
     [newTodo setValue:@"Hello One-To-One" forKey:@"title"];
-    [newTodo setValue:[newTodo sm_assignObjectId] forKey:[newTodo sm_primaryKeyField]];
+    [newTodo setValue:[newTodo assignObjectId] forKey:[newTodo primaryKeyField]];
     
     Category *newCategory = [NSEntityDescription insertNewObjectForEntityForName:@"Category" inManagedObjectContext:self.managedObjectContext];
     
     [newCategory setValue:@"Work" forKey:@"name"];
-    [newCategory setValue:[newCategory sm_assignObjectId] forKey:[newCategory sm_primaryKeyField]];
+    [newCategory setValue:[newCategory assignObjectId] forKey:[newCategory primaryKeyField]];
     
     
     NSError *error = nil;

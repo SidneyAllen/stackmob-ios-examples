@@ -17,6 +17,7 @@
 
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize titleField = _titleField;
+@synthesize todoId = _todoId;
 
 - (AppDelegate *)appDelegate {
     return (AppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -29,15 +30,15 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     self.managedObjectContext = [self.appDelegate managedObjectContext];
+    [self.managedObjectContext setMergePolicy:NSMergeByPropertyObjectTrumpMergePolicy];
     
     self.titleField.delegate = self;
     
     NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:@"Todo" inManagedObjectContext:self.managedObjectContext];
     
     [newManagedObject setValue:@"Hello World" forKey:@"title"];
-    [newManagedObject setValue:[newManagedObject sm_assignObjectId] forKey:[newManagedObject sm_primaryKeyField]];
-    
-    aManagedObject = newManagedObject;
+    self.todoId = [newManagedObject assignObjectId];
+    [newManagedObject setValue:self.todoId forKey:[newManagedObject primaryKeyField]];
     
     NSError *error = nil;
     if (![self.managedObjectContext save:&error]) {
@@ -68,14 +69,23 @@
 
 - (IBAction)updateObject:(id)sender {
     
-    [aManagedObject setValue:self.titleField.text forKey:@"title"];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Todo"];
+    NSPredicate *predicte = [NSPredicate predicateWithFormat:@"todoId == %@", self.todoId];
+    [fetchRequest setPredicate:predicte];
     
     NSError *error = nil;
-    if (![self.managedObjectContext save:&error]) {
-        NSLog(@"There was an error! %@", error);
-    }
-    else {
-        NSLog(@"You saved!");
+    NSArray *results = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    
+    if (!error) {
+        NSManagedObject *todoObject = [results objectAtIndex:0];
+        [todoObject setValue:self.titleField.text forKey:@"title"];
+        error = nil;
+        if (![self.managedObjectContext save:&error]) {
+            NSLog(@"There was an error! %@", error);
+        }
+        else {
+            NSLog(@"You saved!");
+        }
     }
 }
 @end

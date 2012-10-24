@@ -39,7 +39,7 @@
     
     [newManagedObject setValue:@"Hello World" forKey:@"title"];
     [newManagedObject setValue:[NSNumber numberWithInt:5] forKey:@"count"];
-    [newManagedObject setValue:[newManagedObject sm_assignObjectId] forKey:[newManagedObject sm_primaryKeyField]];
+    [newManagedObject setValue:[newManagedObject assignObjectId] forKey:[newManagedObject primaryKeyField]];
     
     NSError *error = nil;
     if (![self.managedObjectContext save:&error]) {

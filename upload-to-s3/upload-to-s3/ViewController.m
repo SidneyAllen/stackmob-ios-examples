@@ -86,7 +86,7 @@
     
     [newManagedObject setValue:picData forKey:@"photo"];
     [newManagedObject setValue:[NSString stringWithFormat:@"Todo with Image"] forKey:@"title"];
-    [newManagedObject setValue:[newManagedObject sm_assignObjectId] forKey:[newManagedObject sm_primaryKeyField]];
+    [newManagedObject setValue:[newManagedObject assignObjectId] forKey:[newManagedObject primaryKeyField]];
     
     // Save the context.
     [self.managedObjectContext performBlock:^{
