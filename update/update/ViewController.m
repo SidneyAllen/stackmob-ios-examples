@@ -30,8 +30,6 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     self.managedObjectContext = [self.appDelegate managedObjectContext];
-    [self.managedObjectContext setMergePolicy:NSMergeByPropertyObjectTrumpMergePolicy];
-    
     self.titleField.delegate = self;
     
     NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:@"Todo" inManagedObjectContext:self.managedObjectContext];
