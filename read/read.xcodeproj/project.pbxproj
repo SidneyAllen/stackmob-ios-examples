@@ -18,7 +18,9 @@
 		DE4BCB871616392E003F4A66 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4BCB861616392E003F4A66 /* CoreData.framework */; };
 		DE4BCB8A16163987003F4A66 /* mydatamodel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE4BCB8816163987003F4A66 /* mydatamodel.xcdatamodeld */; };
 		DE4BCBB2161639D4003F4A66 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = DE4BCB8C161639D4003F4A66 /* CHANGELOG.md */; };
-		DE4BCBB3161639D4003F4A66 /* libstackmob-v1.1.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4BCBB1161639D4003F4A66 /* libstackmob-v1.1.2.a */; };
+		DE4BCBB3161639D4003F4A66 /* libstackmob-v1.1.3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4BCBB1161639D4003F4A66 /* libstackmob-v1.1.3.a */; };
+		DEE2A441165C16840022391A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE2A440165C16840022391A /* SystemConfiguration.framework */; };
+		DEE2A444165C16890022391A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE2A443165C16890022391A /* MobileCoreServices.framework */; };
 		DEE5C483162F36DD0024001B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DEE5C482162F36DD0024001B /* Default-568h@2x.png */; };
 		DEE5C486162F36E50024001B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE5C485162F36E50024001B /* Security.framework */; };
 /* End PBXBuildFile section */
@@ -75,7 +77,9 @@
 		DE4BCBAE161639D4003F4A66 /* StackMob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackMob.h; sourceTree = "<group>"; };
 		DE4BCBAF161639D4003F4A66 /* Synchronization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Synchronization.h; sourceTree = "<group>"; };
 		DE4BCBB0161639D4003F4A66 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
-		DE4BCBB1161639D4003F4A66 /* libstackmob-v1.1.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libstackmob-v1.1.2.a"; sourceTree = "<group>"; };
+		DE4BCBB1161639D4003F4A66 /* libstackmob-v1.1.3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libstackmob-v1.1.3.a"; sourceTree = "<group>"; };
+		DEE2A440165C16840022391A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		DEE2A443165C16890022391A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		DEE5C482162F36DD0024001B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		DEE5C485162F36E50024001B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -85,12 +89,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEE2A444165C16890022391A /* MobileCoreServices.framework in Frameworks */,
+				DEE2A441165C16840022391A /* SystemConfiguration.framework in Frameworks */,
 				DEE5C486162F36E50024001B /* Security.framework in Frameworks */,
 				DE4BCB871616392E003F4A66 /* CoreData.framework in Frameworks */,
 				DE4BCB68161638D4003F4A66 /* UIKit.framework in Frameworks */,
 				DE4BCB6A161638D4003F4A66 /* Foundation.framework in Frameworks */,
 				DE4BCB6C161638D4003F4A66 /* CoreGraphics.framework in Frameworks */,
-				DE4BCBB3161639D4003F4A66 /* libstackmob-v1.1.2.a in Frameworks */,
+				DE4BCBB3161639D4003F4A66 /* libstackmob-v1.1.3.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,7 +106,7 @@
 		DE4BCB58161638D4003F4A66 = {
 			isa = PBXGroup;
 			children = (
-				DE4BCB8B161639D4003F4A66 /* StackMob-v1.1.2 */,
+				DE4BCB8B161639D4003F4A66 /* StackMob-v1.1.3 */,
 				DE4BCB6D161638D4003F4A66 /* read */,
 				DE4BCB66161638D4003F4A66 /* Frameworks */,
 				DE4BCB64161638D4003F4A66 /* Products */,
@@ -118,6 +124,8 @@
 		DE4BCB66161638D4003F4A66 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DEE2A443165C16890022391A /* MobileCoreServices.framework */,
+				DEE2A440165C16840022391A /* SystemConfiguration.framework */,
 				DEE5C485162F36E50024001B /* Security.framework */,
 				DE4BCB861616392E003F4A66 /* CoreData.framework */,
 				DE4BCB67161638D4003F4A66 /* UIKit.framework */,
@@ -153,14 +161,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		DE4BCB8B161639D4003F4A66 /* StackMob-v1.1.2 */ = {
+		DE4BCB8B161639D4003F4A66 /* StackMob-v1.1.3 */ = {
 			isa = PBXGroup;
 			children = (
 				DE4BCB8C161639D4003F4A66 /* CHANGELOG.md */,
 				DE4BCB8D161639D4003F4A66 /* Headers */,
-				DE4BCBB1161639D4003F4A66 /* libstackmob-v1.1.2.a */,
+				DE4BCBB1161639D4003F4A66 /* libstackmob-v1.1.3.a */,
 			);
-			path = "StackMob-v1.1.2";
+			path = "StackMob-v1.1.3";
 			sourceTree = "<group>";
 		};
 		DE4BCB8D161639D4003F4A66 /* Headers */ = {
@@ -356,7 +364,7 @@
 				INFOPLIST_FILE = "read/read-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/StackMob-v1.1.2\"",
+					"\"$(SRCROOT)/StackMob-v1.1.3\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = read;
@@ -372,7 +380,7 @@
 				INFOPLIST_FILE = "read/read-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/StackMob-v1.1.2\"",
+					"\"$(SRCROOT)/StackMob-v1.1.3\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = read;
