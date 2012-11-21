@@ -8,12 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@class SMPushClient;
-
 @interface ViewController : UIViewController
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-@property (strong, nonatomic) SMPushClient *pushClient;
 
 - (IBAction)registerDevice:(id)sender;
 

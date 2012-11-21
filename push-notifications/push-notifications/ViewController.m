@@ -16,18 +16,15 @@
 @implementation ViewController
 
 @synthesize managedObjectContext = _managedObjectContext;
-@synthesize pushClient = _pushClient;
 
 - (AppDelegate *)appDelegate {
     return (AppDelegate *)[[UIApplication sharedApplication] delegate];
 }
 
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.pushClient = self.appDelegate.pushClient;
     self.managedObjectContext = [self.appDelegate managedObjectContext];
 }
 
