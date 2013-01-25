@@ -38,7 +38,7 @@
         }];
     }
     
-    self.managedObjectContext = [self.appDelegate managedObjectContext];
+    self.managedObjectContext = [[self.appDelegate coreDataStore] contextForCurrentThread];
 }
 
 - (void)updateView {

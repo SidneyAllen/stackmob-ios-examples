@@ -11,15 +11,14 @@
 
 @implementation AppDelegate
 @synthesize client = _client;
+@synthesize coreDataStore = _coreDataStore;
 @synthesize managedObjectModel = _managedObjectModel;
-@synthesize managedObjectContext = _managedObjectContext;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
     self.client = [[SMClient alloc] initWithAPIVersion:@"0" publicKey:@"YOUR_PUBLIC_KEY"];
-    SMCoreDataStore *coreDataStore = [self.client coreDataStoreWithManagedObjectModel:self.managedObjectModel];
-    self.managedObjectContext = [coreDataStore managedObjectContext];
+    self.coreDataStore = [self.client coreDataStoreWithManagedObjectModel:self.managedObjectModel];
     return YES;
 }
 

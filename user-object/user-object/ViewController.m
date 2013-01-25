@@ -31,7 +31,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.managedObjectContext = [self.appDelegate managedObjectContext];
+    self.managedObjectContext = [[self.appDelegate coreDataStore] contextForCurrentThread];
     
     self.usernameField.delegate = self;
     self.passwordField.delegate = self;
@@ -58,20 +58,22 @@
 
 - (IBAction)createUser:(id)sender {
     
-    User *newUser = [[User alloc] initIntoManagedObjectContext:[self.appDelegate managedObjectContext]];
+    User *newUser = [[User alloc] initIntoManagedObjectContext:self.managedObjectContext];
     
-    [newUser setValue:self.usernameField.text forKey:[newUser sm_primaryKeyField]];
+    [newUser setValue:self.usernameField.text forKey:[newUser primaryKeyField]];
     [newUser setPassword:self.passwordField.text];
     
-    NSError *error = nil;
-    if (![self.managedObjectContext save:&error]) {
+    [self.managedObjectContext saveOnSuccess:^{
+        
+        NSLog(@"You created a new user object!");
+        
+    } onFailure:^(NSError *error) {
+        
         [self.managedObjectContext deleteObject:newUser];
         [newUser removePassword];
         NSLog(@"There was an error! %@", error);
-    }
-    else {
-        NSLog(@"You created a new object!");
-    }
+        
+    }];
     
 }
 @end

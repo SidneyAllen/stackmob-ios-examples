@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "AppDelegate.h"
+#import "StackMob.h"
 
 @interface ViewController ()
 
@@ -27,7 +28,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.managedObjectContext = [self.appDelegate managedObjectContext];
+    self.managedObjectContext = [[self.appDelegate coreDataStore] contextForCurrentThread];
 }
 
 - (void)viewDidUnload
@@ -54,12 +55,29 @@
     // set any predicates or sort descriptors, etc.
     
     // execute the request
+    [self.managedObjectContext executeFetchRequest:fetchRequest onSuccess:^(NSArray *results) {
+        
+        NSLog(@"%@",results);
+        
+    } onFailure:^(NSError *error) {
+        
+        NSLog(@"Error fetching: %@", error);
+        
+    }];
     
-    NSError *anError = nil;
+    // Uncomment the following to return managed object IDs instead of managed objects.
     
-    NSArray *theResults = [self.managedObjectContext executeFetchRequest:fetchRequest error:&anError];
-    
-    NSLog(@"%@",theResults);
+    /*
+    [self.managedObjectContext executeFetchRequest:fetchRequest returnManagedObjectIDs:YES onSuccess:^(NSArray *results) {
+        
+        NSLog(@"%@",results);
+        
+    } onFailure:^(NSError *error) {
+        
+        NSLog(@"Error fetching: %@", error);
+        
+    }];
+     */
     
 }
 @end

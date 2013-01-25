@@ -43,7 +43,7 @@
     locationController = [[MyCLController alloc] init];
     [locationController.locationManager startUpdatingLocation];
     
-    self.managedObjectContext = [self.appDelegate managedObjectContext];
+    self.managedObjectContext = [[self.appDelegate coreDataStore] contextForCurrentThread];
 }
 
 - (void)viewDidUnload

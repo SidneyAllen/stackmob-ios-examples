@@ -29,7 +29,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.managedObjectContext = [self.appDelegate managedObjectContext];
+    self.managedObjectContext = [[self.appDelegate coreDataStore] contextForCurrentThread];
     self.titleField.delegate = self;
     
     NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:@"Todo" inManagedObjectContext:self.managedObjectContext];
@@ -39,7 +39,7 @@
     [newManagedObject setValue:self.todoId forKey:[newManagedObject primaryKeyField]];
     
     NSError *error = nil;
-    if (![self.managedObjectContext save:&error]) {
+    if (![self.managedObjectContext saveAndWait:&error]) {
         NSLog(@"There was an error! %@", error);
     }
     else {
@@ -71,19 +71,22 @@
     NSPredicate *predicte = [NSPredicate predicateWithFormat:@"todoId == %@", self.todoId];
     [fetchRequest setPredicate:predicte];
     
-    NSError *error = nil;
-    NSArray *results = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
-    
-    if (!error) {
+    [self.managedObjectContext executeFetchRequest:fetchRequest onSuccess:^(NSArray *results) {
+        
         NSManagedObject *todoObject = [results objectAtIndex:0];
         [todoObject setValue:self.titleField.text forKey:@"title"];
-        error = nil;
-        if (![self.managedObjectContext save:&error]) {
+
+        [self.managedObjectContext saveOnSuccess:^{
+            NSLog(@"You updated the todo object!");
+        } onFailure:^(NSError *error) {
             NSLog(@"There was an error! %@", error);
-        }
-        else {
-            NSLog(@"You saved!");
-        }
-    }
+        }];
+        
+    } onFailure:^(NSError *error) {
+        
+        NSLog(@"Error fetching: %@", error);
+        
+    }];
+    
 }
 @end

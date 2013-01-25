@@ -33,7 +33,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.managedObjectContext = [self.appDelegate managedObjectContext];
+    self.managedObjectContext = [[self.appDelegate coreDataStore] contextForCurrentThread];
     
     self.client = [SMClient defaultClient];
     
@@ -63,29 +63,52 @@
 
 - (IBAction)createUser:(id)sender {
     
-    User *newUser = [[User alloc] initIntoManagedObjectContext:[self.appDelegate managedObjectContext]];
+    User *newUser = [[User alloc] initIntoManagedObjectContext:self.managedObjectContext];
     
-    [newUser setValue:self.usernameField.text forKey:[newUser sm_primaryKeyField]];
+    [newUser setValue:self.usernameField.text forKey:[newUser primaryKeyField]];
     [newUser setPassword:self.passwordField.text];
     
-    NSError *error = nil;
-    if (![self.managedObjectContext save:&error]) {
+    [self.managedObjectContext saveOnSuccess:^{
+        
+        NSLog(@"You created a new user object!");
+        
+    } onFailure:^(NSError *error) {
+        
         [self.managedObjectContext deleteObject:newUser];
         [newUser removePassword];
         NSLog(@"There was an error! %@", error);
-    }
-    else {
-        NSLog(@"You created a new object!");
-    }
-    
+        
+    }];
 }
 
 - (IBAction)login:(id)sender {
     
     [self.client loginWithUsername:self.usernameField.text password:self.passwordField.text onSuccess:^(NSDictionary *results) {
+        
         NSLog(@"Login Success %@",results);
+        
+        /* Uncomment the following if you are using Core Data integration and want to retrieve a managed object representation of the user object.  Store the resulting object or object ID for future use.
+         
+           Be sure to declare variables you are referencing in this block with the __block storage type modifier, including the managedObjectContext property.
+         */
+        /*
+        // Edit entity name and predicate if you are not using the default user schema with username primary key field.
+        NSFetchRequest *userFetch = [[NSFetchRequest alloc] initWithEntityName:@"User"];
+        [userFetch setPredicate:[NSPredicate predicateWithFormat:@"username == %@", [results objectForKey:@"username"]]];
+        [self.managedObjectContext executeFetchRequest:userFetch onSuccess:^(NSArray *results) {
+            NSManagedObject *userObject = [results lastObject];
+            // Store userObject somewhere for later use
+            NSLog(@"Fetched user object: %@", userObject);
+        } onFailure:^(NSError *error) {
+            NSLog(@"Error fetching user object: %@", error);
+        }];
+         */
+        
+        
     } onFailure:^(NSError *error) {
+        
         NSLog(@"Login Fail: %@",error);
+        
     }];
 }
 

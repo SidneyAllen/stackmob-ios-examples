@@ -8,6 +8,7 @@
 
 #import "ListViewController.h"
 #import "AppDelegate.h"
+#import "StackMob.h"
 
 @interface ListViewController ()
 
@@ -32,7 +33,7 @@
 {
     [super viewDidLoad];
     
-    self.managedObjectContext = [self.appDelegate managedObjectContext];
+    self.managedObjectContext = [[self.appDelegate coreDataStore] contextForCurrentThread];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;

@@ -11,6 +11,7 @@
 #import <FacebookSDK/FacebookSDK.h>
 
 @class SMClient;
+@class SMCoreDataStore;
 
 @class ViewController;
 
@@ -18,7 +19,7 @@
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) NSManagedObjectModel *managedObjectModel;
-@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (strong, nonatomic) SMCoreDataStore *coreDataStore;
 @property (strong, nonatomic) SMClient *client;
 @property (strong, nonatomic) ViewController *viewController;
 

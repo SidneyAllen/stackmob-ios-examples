@@ -29,7 +29,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.managedObjectContext = [self.appDelegate managedObjectContext];
+    self.managedObjectContext = [[self.appDelegate coreDataStore] contextForCurrentThread];
     self.titleField.delegate = self;
 }
 
@@ -58,12 +58,10 @@
     [newManagedObject setValue:self.titleField.text forKey:@"title"];
     [newManagedObject setValue:[newManagedObject assignObjectId] forKey:[newManagedObject primaryKeyField]];
     
-    NSError *error = nil;
-    if (![self.managedObjectContext save:&error]) {
-        NSLog(@"There was an error! %@", error);
-    }
-    else {
+    [self.managedObjectContext saveOnSuccess:^{
         NSLog(@"You created a new object!");
-    }
+    } onFailure:^(NSError *error) {
+        NSLog(@"There was an error! %@", error);
+    }];
 }
 @end

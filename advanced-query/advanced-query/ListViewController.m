@@ -33,7 +33,7 @@
 {
     [super viewDidLoad];
     
-    self.managedObjectContext = [self.appDelegate managedObjectContext];
+    self.managedObjectContext = [[self.appDelegate coreDataStore] contextForCurrentThread];
     
     NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:@"Todo" inManagedObjectContext:self.managedObjectContext];
     
@@ -41,13 +41,11 @@
     [newManagedObject setValue:[NSNumber numberWithInt:5] forKey:@"count"];
     [newManagedObject setValue:[newManagedObject assignObjectId] forKey:[newManagedObject primaryKeyField]];
     
-    NSError *error = nil;
-    if (![self.managedObjectContext save:&error]) {
-        NSLog(@"There was an error! %@", error);
-    }
-    else {
+    [self.managedObjectContext saveOnSuccess:^{
         NSLog(@"You created a new object!");
-    }
+    } onFailure:^(NSError *error) {
+        NSLog(@"There was an error! %@", error);
+    }];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;

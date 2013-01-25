@@ -27,7 +27,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.managedObjectContext = [self.appDelegate managedObjectContext];
+    self.managedObjectContext = [[self.appDelegate coreDataStore] contextForCurrentThread];
     
     NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:@"Todo" inManagedObjectContext:self.managedObjectContext];
     
@@ -37,7 +37,7 @@
     aManagedObject = newManagedObject;
     
     NSError *error = nil;
-    if (![self.managedObjectContext save:&error]) {
+    if (![self.managedObjectContext saveAndWait:&error]) {
         NSLog(@"There was an error! %@", error);
     }
     else {
@@ -61,12 +61,15 @@
     
     [self.managedObjectContext deleteObject:aManagedObject];
     
-    NSError *error = nil;
-    if (![self.managedObjectContext save:&error]) {
+    [self.managedObjectContext saveOnSuccess:^{
+        
+        NSLog(@"You deleted the new object!");
+        
+    } onFailure:^(NSError *error) {
+        
         NSLog(@"There was an error! %@", error);
-    }
-    else {
-        NSLog(@"You deleted an object!");
-    }
+        
+    }];
+    
 }
 @end

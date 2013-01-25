@@ -30,7 +30,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.managedObjectContext = [self.appDelegate managedObjectContext];
+    self.managedObjectContext = [[self.appDelegate coreDataStore] contextForCurrentThread];
     
     Todo *newTodo = [NSEntityDescription insertNewObjectForEntityForName:@"Todo" inManagedObjectContext:self.managedObjectContext];
     
@@ -44,7 +44,7 @@
     
     
     NSError *error = nil;
-    if (![self.managedObjectContext save:&error]) {
+    if (![self.managedObjectContext saveAndWait:&error]) {
         NSLog(@"There was an error! %@", error);
     }
     else {
@@ -53,13 +53,16 @@
     
     [newTodo setCategory:newCategory];
     
-    error = nil;
-    if (![self.managedObjectContext save:&error]) {
-        NSLog(@"There was an error! %@", error);
-    }
-    else {
+    [self.managedObjectContext saveOnSuccess:^{
+        
         NSLog(@"You created a relationship between the Todo and Category Object!");
-    }
+        
+    } onFailure:^(NSError *error) {
+        
+        NSLog(@"There was an error! %@", error);
+        
+    }];
+    
 }
 
 - (void)viewDidUnload

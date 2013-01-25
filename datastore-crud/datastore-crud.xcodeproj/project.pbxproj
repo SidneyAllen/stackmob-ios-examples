@@ -17,7 +17,7 @@
 		DEA55E9C16190B2B00E7AB2B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA55E9B16190B2B00E7AB2B /* ViewController.m */; };
 		DEA55EA316190B5500E7AB2B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA55EA216190B5500E7AB2B /* CoreData.framework */; };
 		DEA55ECB16190BA600E7AB2B /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = DEA55EA516190BA600E7AB2B /* CHANGELOG.md */; };
-		DEA55ECC16190BA600E7AB2B /* libstackmob-v1.1.3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA55ECA16190BA600E7AB2B /* libstackmob-v1.1.3.a */; };
+		DEA55ECC16190BA600E7AB2B /* libstackmob-v1.2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA55ECA16190BA600E7AB2B /* libstackmob-v1.2.0.a */; };
 		DEE2A3F5165C14720022391A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE2A3F4165C14720022391A /* SystemConfiguration.framework */; };
 		DEE2A3F8165C14780022391A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE2A3F7165C14780022391A /* MobileCoreServices.framework */; };
 		DEE5C449162F35410024001B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DEE5C448162F35410024001B /* Default-568h@2x.png */; };
@@ -75,7 +75,7 @@
 		DEA55EC716190BA600E7AB2B /* StackMob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackMob.h; sourceTree = "<group>"; };
 		DEA55EC816190BA600E7AB2B /* Synchronization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Synchronization.h; sourceTree = "<group>"; };
 		DEA55EC916190BA600E7AB2B /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
-		DEA55ECA16190BA600E7AB2B /* libstackmob-v1.1.3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libstackmob-v1.1.3.a"; sourceTree = "<group>"; };
+		DEA55ECA16190BA600E7AB2B /* libstackmob-v1.2.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libstackmob-v1.2.0.a"; sourceTree = "<group>"; };
 		DEE2A3F4165C14720022391A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		DEE2A3F7165C14780022391A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		DEE5C448162F35410024001B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -94,7 +94,7 @@
 				DEA55E8616190B2B00E7AB2B /* UIKit.framework in Frameworks */,
 				DEA55E8816190B2B00E7AB2B /* Foundation.framework in Frameworks */,
 				DEA55E8A16190B2B00E7AB2B /* CoreGraphics.framework in Frameworks */,
-				DEA55ECC16190BA600E7AB2B /* libstackmob-v1.1.3.a in Frameworks */,
+				DEA55ECC16190BA600E7AB2B /* libstackmob-v1.2.0.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,7 +104,7 @@
 		DEA55E7616190B2B00E7AB2B = {
 			isa = PBXGroup;
 			children = (
-				DEA55EA416190BA600E7AB2B /* StackMob-v1.1.3 */,
+				DEA55EA416190BA600E7AB2B /* StackMob-v1.2.0 */,
 				DEA55E8B16190B2B00E7AB2B /* datastore-crud */,
 				DEA55E8416190B2B00E7AB2B /* Frameworks */,
 				DEA55E8216190B2B00E7AB2B /* Products */,
@@ -158,14 +158,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		DEA55EA416190BA600E7AB2B /* StackMob-v1.1.3 */ = {
+		DEA55EA416190BA600E7AB2B /* StackMob-v1.2.0 */ = {
 			isa = PBXGroup;
 			children = (
 				DEA55EA516190BA600E7AB2B /* CHANGELOG.md */,
 				DEA55EA616190BA600E7AB2B /* Headers */,
-				DEA55ECA16190BA600E7AB2B /* libstackmob-v1.1.3.a */,
+				DEA55ECA16190BA600E7AB2B /* libstackmob-v1.2.0.a */,
 			);
-			path = "StackMob-v1.1.3";
+			path = "StackMob-v1.2.0";
 			sourceTree = "<group>";
 		};
 		DEA55EA616190BA600E7AB2B /* Headers */ = {
@@ -360,7 +360,7 @@
 				INFOPLIST_FILE = "datastore-crud/datastore-crud-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/StackMob-v1.1.3\"",
+					"\"$(SRCROOT)/StackMob-v1.2.0\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -376,7 +376,7 @@
 				INFOPLIST_FILE = "datastore-crud/datastore-crud-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/StackMob-v1.1.3\"",
+					"\"$(SRCROOT)/StackMob-v1.2.0\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";

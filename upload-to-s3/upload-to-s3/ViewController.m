@@ -28,7 +28,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.managedObjectContext = [self.appDelegate managedObjectContext];
+    self.managedObjectContext = [[self.appDelegate coreDataStore] contextForCurrentThread];
 }
 
 - (void)viewDidUnload
@@ -72,11 +72,9 @@
 - (void)insertNewObject:(id)image
 {
     
-    NSManagedObjectContext *context = [self managedObjectContext];
-    
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Todo" inManagedObjectContext:self.managedObjectContext];
     
-    NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
+    __block NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:self.managedObjectContext];
     
     // Create the NSData representation of the UIImage object sent as an argument.
     NSData *imageData = UIImageJPEGRepresentation(image, 0.7);
@@ -89,19 +87,12 @@
     [newManagedObject setValue:[newManagedObject assignObjectId] forKey:[newManagedObject primaryKeyField]];
     
     // Save the context.
-    [self.managedObjectContext performBlock:^{
-        NSLog(@"saving context...");
-        NSError *error = nil;
-        if (![context save:&error]) {
-            // Replace this implementation with code to handle the error appropriately.
-            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-            abort();
-        } else {
-            NSLog(@"%@", newManagedObject);
-        }
+    [self.managedObjectContext saveOnSuccess:^{
+        [self.managedObjectContext refreshObject:newManagedObject mergeChanges:YES];
+        NSLog(@"Saved object with photo!");
+    } onFailure:^(NSError *error) {
+        NSLog(@"Error saving: %@", error);
     }];
-    
 }
 
 @end
