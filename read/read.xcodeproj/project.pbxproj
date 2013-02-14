@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D24A68A16CCB00200604C66 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D24A68916CCB00200604C66 /* CoreLocation.framework */; };
 		DE28339B16B1CCFA008710C2 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = DE28336C16B1CCF9008710C2 /* CHANGELOG.md */; };
 		DE28339C16B1CCFA008710C2 /* libstackmob-v1.3.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE28339A16B1CCF9008710C2 /* libstackmob-v1.3.0.a */; };
 		DE4BCB68161638D4003F4A66 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4BCB67161638D4003F4A66 /* UIKit.framework */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D24A68916CCB00200604C66 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		DE28336C16B1CCF9008710C2 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGELOG.md; sourceTree = "<group>"; };
 		DE28336E16B1CCF9008710C2 /* AFHTTPClient+StackMob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFHTTPClient+StackMob.h"; sourceTree = "<group>"; };
 		DE28336F16B1CCF9008710C2 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D24A68A16CCB00200604C66 /* CoreLocation.framework in Frameworks */,
 				DEE2A444165C16890022391A /* MobileCoreServices.framework in Frameworks */,
 				DEE2A441165C16840022391A /* SystemConfiguration.framework in Frameworks */,
 				DEE5C486162F36E50024001B /* Security.framework in Frameworks */,
@@ -194,6 +197,7 @@
 		DE4BCB66161638D4003F4A66 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1D24A68916CCB00200604C66 /* CoreLocation.framework */,
 				DEE2A443165C16890022391A /* MobileCoreServices.framework */,
 				DEE2A440165C16840022391A /* SystemConfiguration.framework */,
 				DEE5C485162F36E50024001B /* Security.framework */,

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D24A69A16CCB04300604C66 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D24A69916CCB04300604C66 /* CoreLocation.framework */; };
 		DE4BCB68161638D4003F4A66 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4BCB67161638D4003F4A66 /* UIKit.framework */; };
 		DE4BCB6A161638D4003F4A66 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4BCB69161638D4003F4A66 /* Foundation.framework */; };
 		DE4BCB6C161638D4003F4A66 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4BCB6B161638D4003F4A66 /* CoreGraphics.framework */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D24A69916CCB04300604C66 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		DE4BCB63161638D4003F4A66 /* user-object.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "user-object.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE4BCB67161638D4003F4A66 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DE4BCB69161638D4003F4A66 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -48,7 +50,6 @@
 		DE9ED6A0162E49EF0078A4C7 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		DE9ED6A1162E49EF0078A4C7 /* AFImageRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageRequestOperation.h; sourceTree = "<group>"; };
 		DE9ED6A2162E49EF0078A4C7 /* AFJSONRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONRequestOperation.h; sourceTree = "<group>"; };
-		DE9ED6A3162E49EF0078A4C7 /* AFJSONUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONUtilities.h; sourceTree = "<group>"; };
 		DE9ED6A4162E49EF0078A4C7 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
 		DE9ED6A5162E49EF0078A4C7 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
 		DE9ED6A6162E49EF0078A4C7 /* AFPropertyListRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPropertyListRequestOperation.h; sourceTree = "<group>"; };
@@ -93,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D24A69A16CCB04300604C66 /* CoreLocation.framework in Frameworks */,
 				DEE2A456165C16DF0022391A /* MobileCoreServices.framework in Frameworks */,
 				DEE2A453165C16D90022391A /* SystemConfiguration.framework in Frameworks */,
 				DE8F0B7C162CC77D00FC47C1 /* Security.framework in Frameworks */,
@@ -128,6 +130,7 @@
 		DE4BCB66161638D4003F4A66 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1D24A69916CCB04300604C66 /* CoreLocation.framework */,
 				DEE2A455165C16DF0022391A /* MobileCoreServices.framework */,
 				DEE2A452165C16D90022391A /* SystemConfiguration.framework */,
 				DE8F0B7B162CC77D00FC47C1 /* Security.framework */,
@@ -184,7 +187,6 @@
 				DE9ED6A0162E49EF0078A4C7 /* AFHTTPRequestOperation.h */,
 				DE9ED6A1162E49EF0078A4C7 /* AFImageRequestOperation.h */,
 				DE9ED6A2162E49EF0078A4C7 /* AFJSONRequestOperation.h */,
-				DE9ED6A3162E49EF0078A4C7 /* AFJSONUtilities.h */,
 				DE9ED6A4162E49EF0078A4C7 /* AFNetworkActivityIndicatorManager.h */,
 				DE9ED6A5162E49EF0078A4C7 /* AFNetworking.h */,
 				DE9ED6A6162E49EF0078A4C7 /* AFPropertyListRequestOperation.h */,

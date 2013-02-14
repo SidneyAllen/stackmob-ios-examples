@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D24A62116CCAD7E00604C66 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D24A62016CCAD7E00604C66 /* CoreLocation.framework */; };
 		1FF814DC163752CD00BA7B9D /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FF814DB163752CD00BA7B9D /* Social.framework */; };
 		1FF814DE1637536D00BA7B9D /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FF814DD1637536D00BA7B9D /* AdSupport.framework */; };
 		1FF814E01637539D00BA7B9D /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FF814DF1637539D00BA7B9D /* Accounts.framework */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D24A62016CCAD7E00604C66 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		1FF814DB163752CD00BA7B9D /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		1FF814DD1637536D00BA7B9D /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		1FF814DF1637539D00BA7B9D /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
@@ -58,7 +60,6 @@
 		DEE7C14D163F02FE00F436A1 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		DEE7C14E163F02FE00F436A1 /* AFImageRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageRequestOperation.h; sourceTree = "<group>"; };
 		DEE7C14F163F02FE00F436A1 /* AFJSONRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONRequestOperation.h; sourceTree = "<group>"; };
-		DEE7C150163F02FE00F436A1 /* AFJSONUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONUtilities.h; sourceTree = "<group>"; };
 		DEE7C151163F02FE00F436A1 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
 		DEE7C152163F02FE00F436A1 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
 		DEE7C153163F02FE00F436A1 /* AFPropertyListRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPropertyListRequestOperation.h; sourceTree = "<group>"; };
@@ -98,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D24A62116CCAD7E00604C66 /* CoreLocation.framework in Frameworks */,
 				DEE2A40A165C14D10022391A /* MobileCoreServices.framework in Frameworks */,
 				DEE2A407165C14CC0022391A /* SystemConfiguration.framework in Frameworks */,
 				DEE7C11D163EFF0300F436A1 /* FacebookSDK.framework in Frameworks */,
@@ -137,6 +139,7 @@
 		DE4BCB66161638D4003F4A66 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1D24A62016CCAD7E00604C66 /* CoreLocation.framework */,
 				DEE2A409165C14D10022391A /* MobileCoreServices.framework */,
 				DEE2A406165C14CC0022391A /* SystemConfiguration.framework */,
 				DEE7C11C163EFF0300F436A1 /* FacebookSDK.framework */,
@@ -195,7 +198,6 @@
 				DEE7C14D163F02FE00F436A1 /* AFHTTPRequestOperation.h */,
 				DEE7C14E163F02FE00F436A1 /* AFImageRequestOperation.h */,
 				DEE7C14F163F02FE00F436A1 /* AFJSONRequestOperation.h */,
-				DEE7C150163F02FE00F436A1 /* AFJSONUtilities.h */,
 				DEE7C151163F02FE00F436A1 /* AFNetworkActivityIndicatorManager.h */,
 				DEE7C152163F02FE00F436A1 /* AFNetworking.h */,
 				DEE7C153163F02FE00F436A1 /* AFPropertyListRequestOperation.h */,
