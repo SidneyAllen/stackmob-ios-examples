@@ -14,13 +14,8 @@
  * limitations under the License.
  */
 
-#import "AFHTTPClient.h"
+#ifndef OS_OBJECT_USE_OBJC 
 
-@interface AFHTTPClient (StackMob)
+#define OS_OBJECT_USE_OBJC 0 
 
-- (void)enqueueBatchOfHTTPRequestOperations:(NSArray *)operations
-                       completionBlockQueue:(dispatch_queue_t)queue
-                              progressBlock:(void (^)(NSUInteger numberOfFinishedOperations, NSUInteger totalNumberOfOperations))progressBlock
-                            completionBlock:(void (^)(NSArray *operations))completionBlock;
-
-@end
+#endif

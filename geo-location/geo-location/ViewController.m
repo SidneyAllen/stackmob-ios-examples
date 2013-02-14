@@ -12,6 +12,11 @@
  Import the StackMob header file.
  */
 #import "StackMob.h"
+/*
+Import the Todo header file.
+ */
+#import "Todo.h"
+
 
 @interface ViewController ()
 
@@ -36,12 +41,6 @@
      */
     _mapView.delegate = self;
     
-    /*
-     Initialize the locationManager and call the updating location method.
-     */
-    locationController = [[MyCLController alloc] init];
-    [locationController.locationManager startUpdatingLocation];
-    
     self.managedObjectContext = [[self.appDelegate coreDataStore] contextForCurrentThread];
 }
 
@@ -58,31 +57,28 @@
 }
 
 - (IBAction)saveLocation:(id)sender {
+    
     /*
      Get the current longitude and latitude.
      */
-    NSDecimalNumber *latDecimal = [[NSDecimalNumber alloc] initWithDouble:locationController.locationManager.location.coordinate.latitude];
-    NSDecimalNumber *lonDecimal = [[NSDecimalNumber alloc] initWithDouble:locationController.locationManager.location.coordinate.longitude];
-    
-    /*
-     Make an NSDictionary with the latitude and longitude.
-     */
-    NSDictionary *location = [NSDictionary dictionaryWithObjectsAndKeys:
-                              latDecimal
-                              ,@"lat"
-                              ,lonDecimal
-                              ,@"lon", nil];
-    
-    /*
-     Save the location to StackMob.
-     */
-    NSDictionary *arguments = [NSDictionary dictionaryWithObjectsAndKeys:@"My Location", @"name", location, @"location", nil];
-    
-    [[[SMClient defaultClient] dataStore] createObject:arguments inSchema:@"todo" onSuccess:^(NSDictionary *theObject, NSString *schema) {
-        NSLog(@"Created object %@ in schema %@", theObject, schema);
+    [SMGeoPoint getGeoPointForCurrentLocationOnSuccess:^(SMGeoPoint *geoPoint) {
         
-    } onFailure:^(NSError *theError, NSDictionary *theObject, NSString *schema) {
-        NSLog(@"Error creating object: %@", theError);
+        Todo *todo = [NSEntityDescription insertNewObjectForEntityForName:@"Todo" inManagedObjectContext:self.managedObjectContext];
+        todo.todoId = [todo assignObjectId];
+        todo.title = @"My Location";
+        todo.location = [NSKeyedArchiver archivedDataWithRootObject:geoPoint];
+        
+        /*
+         Save the location to StackMob.
+         */
+       [self.managedObjectContext saveOnSuccess:^{
+           NSLog(@"Created new object in Todo schema");
+       } onFailure:^(NSError *error) {
+            NSLog(@"Error creating object: %@", error);
+       }];
+        
+    } onFailure:^(NSError *error) {
+        NSLog(@"Error getting SMGeoPoint: %@", error);
     }];
 }
 @end

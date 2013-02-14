@@ -8,12 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
-#import "MyCLController.h"
 
-
-@interface ViewController : UIViewController <MKMapViewDelegate> {
-    MyCLController *locationController;
-}
+@interface ViewController : UIViewController <MKMapViewDelegate>
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
