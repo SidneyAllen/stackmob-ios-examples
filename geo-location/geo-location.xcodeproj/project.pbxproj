@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1D24A57316CC739A00604C66 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = 1D24A54016CC739A00604C66 /* CHANGELOG.md */; };
-		1D24A57416CC739A00604C66 /* libstackmob-v1.2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D24A57216CC739A00604C66 /* libstackmob-v1.2.0.a */; };
+		1D24A57416CC739A00604C66 /* libstackmob-v1.3.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D24A57216CC739A00604C66 /* libstackmob-v1.3.0.a */; };
 		1D24A57716CC74AC00604C66 /* Todo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D24A57616CC74AC00604C66 /* Todo.m */; };
 		1D71D94A162E1D1F00C92DE4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D71D949162E1D1F00C92DE4 /* MapKit.framework */; };
 		1D71D94C162E1D2E00C92DE4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D71D94B162E1D2E00C92DE4 /* Security.framework */; };
@@ -78,7 +78,7 @@
 		1D24A56F16CC739A00604C66 /* Synchronization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Synchronization.h; sourceTree = "<group>"; };
 		1D24A57016CC739A00604C66 /* SystemInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemInformation.h; sourceTree = "<group>"; };
 		1D24A57116CC739A00604C66 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
-		1D24A57216CC739A00604C66 /* libstackmob-v1.2.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libstackmob-v1.2.0.a"; sourceTree = "<group>"; };
+		1D24A57216CC739A00604C66 /* libstackmob-v1.3.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libstackmob-v1.3.0.a"; sourceTree = "<group>"; };
 		1D24A57516CC74AC00604C66 /* Todo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Todo.h; sourceTree = "<group>"; };
 		1D24A57616CC74AC00604C66 /* Todo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Todo.m; sourceTree = "<group>"; };
 		1D71D949162E1D1F00C92DE4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -118,21 +118,21 @@
 				DE4BCB68161638D4003F4A66 /* UIKit.framework in Frameworks */,
 				DE4BCB6A161638D4003F4A66 /* Foundation.framework in Frameworks */,
 				DE4BCB6C161638D4003F4A66 /* CoreGraphics.framework in Frameworks */,
-				1D24A57416CC739A00604C66 /* libstackmob-v1.2.0.a in Frameworks */,
+				1D24A57416CC739A00604C66 /* libstackmob-v1.3.0.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1D24A53F16CC739A00604C66 /* StackMob-v1.2.0 */ = {
+		1D24A53F16CC739A00604C66 /* StackMob-v1.3.0 */ = {
 			isa = PBXGroup;
 			children = (
 				1D24A54016CC739A00604C66 /* CHANGELOG.md */,
 				1D24A54116CC739A00604C66 /* Headers */,
-				1D24A57216CC739A00604C66 /* libstackmob-v1.2.0.a */,
+				1D24A57216CC739A00604C66 /* libstackmob-v1.3.0.a */,
 			);
-			path = "StackMob-v1.2.0";
+			path = "StackMob-v1.3.0";
 			sourceTree = "<group>";
 		};
 		1D24A54116CC739A00604C66 /* Headers */ = {
@@ -226,7 +226,7 @@
 		DE4BCB6D161638D4003F4A66 /* geo-location */ = {
 			isa = PBXGroup;
 			children = (
-				1D24A53F16CC739A00604C66 /* StackMob-v1.2.0 */,
+				1D24A53F16CC739A00604C66 /* StackMob-v1.3.0 */,
 				DE4BCB76161638D4003F4A66 /* AppDelegate.h */,
 				DE4BCB77161638D4003F4A66 /* AppDelegate.m */,
 				DE4BCB79161638D4003F4A66 /* MainStoryboard.storyboard */,
@@ -404,8 +404,8 @@
 				INFOPLIST_FILE = "geo-location/geo-location-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/StackMob-v1.2.0\"",
-					"\"$(SRCROOT)/geo-location/StackMob-v1.2.0\"",
+					"\"$(SRCROOT)/StackMob-v1.3.0\"",
+					"\"$(SRCROOT)/geo-location/StackMob-v1.3.0\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "geo-location";
@@ -421,8 +421,8 @@
 				INFOPLIST_FILE = "geo-location/geo-location-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/StackMob-v1.2.0\"",
-					"\"$(SRCROOT)/geo-location/StackMob-v1.2.0\"",
+					"\"$(SRCROOT)/StackMob-v1.3.0\"",
+					"\"$(SRCROOT)/geo-location/StackMob-v1.3.0\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "geo-location";

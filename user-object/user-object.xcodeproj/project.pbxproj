@@ -19,7 +19,7 @@
 		DE4BCB8A16163987003F4A66 /* mydatamodel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE4BCB8816163987003F4A66 /* mydatamodel.xcdatamodeld */; };
 		DE8F0B7C162CC77D00FC47C1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE8F0B7B162CC77D00FC47C1 /* Security.framework */; };
 		DE9ED6C4162E49EF0078A4C7 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = DE9ED69D162E49EF0078A4C7 /* CHANGELOG.md */; };
-		DE9ED6C5162E49EF0078A4C7 /* libstackmob-v1.2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE9ED6C3162E49EF0078A4C7 /* libstackmob-v1.2.0.a */; };
+		DE9ED6C5162E49EF0078A4C7 /* libstackmob-v1.3.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE9ED6C3162E49EF0078A4C7 /* libstackmob-v1.3.0.a */; };
 		DEA55DC31618E17400E7AB2B /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA55DC21618E17400E7AB2B /* User.m */; };
 		DEE2A453165C16D90022391A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE2A452165C16D90022391A /* SystemConfiguration.framework */; };
 		DEE2A456165C16DF0022391A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE2A455165C16DF0022391A /* MobileCoreServices.framework */; };
@@ -80,7 +80,7 @@
 		DE9ED6C0162E49EF0078A4C7 /* StackMob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackMob.h; sourceTree = "<group>"; };
 		DE9ED6C1162E49EF0078A4C7 /* Synchronization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Synchronization.h; sourceTree = "<group>"; };
 		DE9ED6C2162E49EF0078A4C7 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
-		DE9ED6C3162E49EF0078A4C7 /* libstackmob-v1.2.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libstackmob-v1.2.0.a"; sourceTree = "<group>"; };
+		DE9ED6C3162E49EF0078A4C7 /* libstackmob-v1.3.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libstackmob-v1.3.0.a"; sourceTree = "<group>"; };
 		DEA55DC11618E17400E7AB2B /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		DEA55DC21618E17400E7AB2B /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		DEE2A452165C16D90022391A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -100,7 +100,7 @@
 				DE4BCB68161638D4003F4A66 /* UIKit.framework in Frameworks */,
 				DE4BCB6A161638D4003F4A66 /* Foundation.framework in Frameworks */,
 				DE4BCB6C161638D4003F4A66 /* CoreGraphics.framework in Frameworks */,
-				DE9ED6C5162E49EF0078A4C7 /* libstackmob-v1.2.0.a in Frameworks */,
+				DE9ED6C5162E49EF0078A4C7 /* libstackmob-v1.3.0.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,7 +110,7 @@
 		DE4BCB58161638D4003F4A66 = {
 			isa = PBXGroup;
 			children = (
-				DE9ED69C162E49EF0078A4C7 /* StackMob-v1.2.0 */,
+				DE9ED69C162E49EF0078A4C7 /* StackMob-v1.3.0 */,
 				DE4BCB6D161638D4003F4A66 /* user-object */,
 				DE4BCB66161638D4003F4A66 /* Frameworks */,
 				DE4BCB64161638D4003F4A66 /* Products */,
@@ -167,14 +167,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		DE9ED69C162E49EF0078A4C7 /* StackMob-v1.2.0 */ = {
+		DE9ED69C162E49EF0078A4C7 /* StackMob-v1.3.0 */ = {
 			isa = PBXGroup;
 			children = (
 				DE9ED69D162E49EF0078A4C7 /* CHANGELOG.md */,
 				DE9ED69E162E49EF0078A4C7 /* Headers */,
-				DE9ED6C3162E49EF0078A4C7 /* libstackmob-v1.2.0.a */,
+				DE9ED6C3162E49EF0078A4C7 /* libstackmob-v1.3.0.a */,
 			);
-			path = "StackMob-v1.2.0";
+			path = "StackMob-v1.3.0";
 			sourceTree = "<group>";
 		};
 		DE9ED69E162E49EF0078A4C7 /* Headers */ = {
@@ -372,7 +372,7 @@
 				INFOPLIST_FILE = "user-object/user-object-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/StackMob-v1.2.0\"",
+					"\"$(SRCROOT)/StackMob-v1.3.0\"",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
@@ -389,7 +389,7 @@
 				INFOPLIST_FILE = "user-object/user-object-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/StackMob-v1.2.0\"",
+					"\"$(SRCROOT)/StackMob-v1.3.0\"",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
