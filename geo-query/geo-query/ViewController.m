@@ -99,7 +99,17 @@
         [fetchRequest setPredicate:predicate];
         
         [self.managedObjectContext executeFetchRequest:fetchRequest onSuccess:^(NSArray *results) {
-            NSLog(@"Successful query %@", results);
+            NSLog(@"Successful query.");
+            [results enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                
+                Todo *todo = obj;
+                /*
+                 To properly pull out the geo point data, unarchive the NSData into an SMGeoPoint instance.
+                 */
+                NSData *data = todo.location;
+                SMGeoPoint *point = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+                NSLog(@"SMGeoPoint for object %i in results: %@", idx, point);
+            }];
         } onFailure:^(NSError *error) {
             NSLog(@"Error: %@", error);
         }];
