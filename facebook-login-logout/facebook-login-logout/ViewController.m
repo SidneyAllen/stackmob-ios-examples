@@ -1,16 +1,26 @@
-//
-//  ViewController.m
-//  facebook-login-logout
-//
-//  Created by Matt Vaznaian on 9/28/12.
-//  Copyright (c) 2012 StackMob. All rights reserved.
-//
+/*
+ * Copyright 2012-2013 StackMob
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 
 #import "ViewController.h"
 #import "AppDelegate.h"
 #import "StackMob.h"
 
 @interface ViewController ()
+
+- (void)openSession;
 
 @end
 
@@ -22,7 +32,6 @@
 - (AppDelegate *)appDelegate {
     return (AppDelegate *)[[UIApplication sharedApplication] delegate];
 }
-
 
 - (void)viewDidLoad
 {
@@ -66,9 +75,7 @@
     if ([self.client isLoggedIn]) {
         [self logoutUser];
     } else {
-        [FBSession openActiveSessionWithReadPermissions:nil allowLoginUI:YES completionHandler:^(FBSession *session, FBSessionState status, NSError *error) {
-            [self sessionStateChanged:session state:status error:error];
-        }];
+        [self openSession];
     }
 }
 
@@ -79,7 +86,7 @@
 
 - (void)createUser {
     
-    [self.client createUserWithFacebookToken:[NSString stringWithFormat:@"%@",FBSession.activeSession.accessToken] onSuccess:^(NSDictionary *result) {
+    [self.client createUserWithFacebookToken:[NSString stringWithFormat:@"%@",FBSession.activeSession.accessTokenData.accessToken] onSuccess:^(NSDictionary *result) {
         NSLog(@"Success %@", result);
         [self loginUser];
     } onFailure:^(NSError *error) {
@@ -93,7 +100,7 @@
 
 - (void)loginUser {
     
-    [self.client loginWithFacebookToken:FBSession.activeSession.accessToken onSuccess:^(NSDictionary *result) {
+    [self.client loginWithFacebookToken:FBSession.activeSession.accessTokenData.accessToken onSuccess:^(NSDictionary *result) {
         NSLog(@"Logged In");
         [self updateView];
     } onFailure:^(NSError *error) {
@@ -110,6 +117,20 @@
     } onFailure:^(NSError *error) {
         NSLog(@"Error: %@", error);
     }];
+}
+
+- (void)openSession
+{
+    NSArray *permissions = [NSArray arrayWithObjects:@"user_photos",
+                            nil];
+    
+    [FBSession openActiveSessionWithReadPermissions:permissions
+                                       allowLoginUI:YES
+                                  completionHandler:
+     ^(FBSession *session,
+       FBSessionState state, NSError *error) {
+         [self sessionStateChanged:session state:state error:error];
+     }];
 }
 
 - (void)sessionStateChanged:(FBSession *)session
@@ -131,6 +152,10 @@
             break;
     }
     
+    [[NSNotificationCenter defaultCenter]
+     postNotificationName:SCSessionStateChangedNotification
+     object:session];
+    
     if (error) {
         UIAlertView *alertView = [[UIAlertView alloc]
                                   initWithTitle:@"Error"
@@ -139,7 +164,7 @@
                                   cancelButtonTitle:@"OK"
                                   otherButtonTitles:nil];
         [alertView show];
-    }    
+    }
 }
 
 @end
