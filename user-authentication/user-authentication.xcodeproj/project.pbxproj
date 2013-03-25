@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1D24A69C16CCB06D00604C66 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D24A69B16CCB06D00604C66 /* CoreLocation.framework */; };
 		DE2833F216B1FE4D008710C2 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = DE2833C316B1FE4D008710C2 /* CHANGELOG.md */; };
-		DE2833F316B1FE4D008710C2 /* libstackmob-v1.3.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2833F116B1FE4D008710C2 /* libstackmob-v1.3.0.a */; };
+		DE2833F316B1FE4D008710C2 /* libstackmob-v1.4.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2833F116B1FE4D008710C2 /* libstackmob-v1.4.0.a */; };
 		DE4BCB68161638D4003F4A66 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4BCB67161638D4003F4A66 /* UIKit.framework */; };
 		DE4BCB6A161638D4003F4A66 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4BCB69161638D4003F4A66 /* Foundation.framework */; };
 		DE4BCB6C161638D4003F4A66 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4BCB6B161638D4003F4A66 /* CoreGraphics.framework */; };
@@ -74,7 +74,7 @@
 		DE2833EE16B1FE4D008710C2 /* Synchronization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Synchronization.h; sourceTree = "<group>"; };
 		DE2833EF16B1FE4D008710C2 /* SystemInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemInformation.h; sourceTree = "<group>"; };
 		DE2833F016B1FE4D008710C2 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
-		DE2833F116B1FE4D008710C2 /* libstackmob-v1.3.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libstackmob-v1.3.0.a"; sourceTree = "<group>"; };
+		DE2833F116B1FE4D008710C2 /* libstackmob-v1.4.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libstackmob-v1.4.0.a"; sourceTree = "<group>"; };
 		DE4BCB63161638D4003F4A66 /* user-authentication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "user-authentication.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE4BCB67161638D4003F4A66 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DE4BCB69161638D4003F4A66 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -111,21 +111,21 @@
 				DE4BCB68161638D4003F4A66 /* UIKit.framework in Frameworks */,
 				DE4BCB6A161638D4003F4A66 /* Foundation.framework in Frameworks */,
 				DE4BCB6C161638D4003F4A66 /* CoreGraphics.framework in Frameworks */,
-				DE2833F316B1FE4D008710C2 /* libstackmob-v1.3.0.a in Frameworks */,
+				DE2833F316B1FE4D008710C2 /* libstackmob-v1.4.0.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DE2833C216B1FE4D008710C2 /* StackMob-v1.3.0 */ = {
+		DE2833C216B1FE4D008710C2 /* StackMob-v1.4.0 */ = {
 			isa = PBXGroup;
 			children = (
 				DE2833C316B1FE4D008710C2 /* CHANGELOG.md */,
 				DE2833C416B1FE4D008710C2 /* Headers */,
-				DE2833F116B1FE4D008710C2 /* libstackmob-v1.3.0.a */,
+				DE2833F116B1FE4D008710C2 /* libstackmob-v1.4.0.a */,
 			);
-			path = "StackMob-v1.3.0";
+			path = "StackMob-v1.4.0";
 			sourceTree = "<group>";
 		};
 		DE2833C416B1FE4D008710C2 /* Headers */ = {
@@ -182,7 +182,7 @@
 		DE4BCB58161638D4003F4A66 = {
 			isa = PBXGroup;
 			children = (
-				DE2833C216B1FE4D008710C2 /* StackMob-v1.3.0 */,
+				DE2833C216B1FE4D008710C2 /* StackMob-v1.4.0 */,
 				DE4BCB6D161638D4003F4A66 /* user-authentication */,
 				DE4BCB66161638D4003F4A66 /* Frameworks */,
 				DE4BCB64161638D4003F4A66 /* Products */,
@@ -266,7 +266,7 @@
 		DE4BCB5A161638D4003F4A66 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0440;
+				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = StackMob;
 			};
 			buildConfigurationList = DE4BCB5D161638D4003F4A66 /* Build configuration list for PBXProject "user-authentication" */;
@@ -342,6 +342,9 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -369,6 +372,9 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
@@ -392,7 +398,7 @@
 				INFOPLIST_FILE = "user-authentication/user-authentication-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/StackMob-v1.3.0\"",
+					"\"$(SRCROOT)/StackMob-v1.4.0\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "user-authentication";
@@ -408,7 +414,7 @@
 				INFOPLIST_FILE = "user-authentication/user-authentication-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/StackMob-v1.3.0\"",
+					"\"$(SRCROOT)/StackMob-v1.4.0\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "user-authentication";

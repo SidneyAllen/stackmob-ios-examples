@@ -84,28 +84,29 @@
     
 }
 
-- (void)createUser {
-    
-    [self.client createUserWithFacebookToken:[NSString stringWithFormat:@"%@",FBSession.activeSession.accessTokenData.accessToken] onSuccess:^(NSDictionary *result) {
-        NSLog(@"Success %@", result);
-        [self loginUser];
-    } onFailure:^(NSError *error) {
-        NSLog(@"Error: %@", error);
-        // User already exists with this FB Token, call Login method
-        if (error.code == 401) {
-            [self loginUser];
-        }
-    }];
-}
-
 - (void)loginUser {
     
-    [self.client loginWithFacebookToken:FBSession.activeSession.accessTokenData.accessToken onSuccess:^(NSDictionary *result) {
-        NSLog(@"Logged In");
-        [self updateView];
-    } onFailure:^(NSError *error) {
-        NSLog(@"Error: %@", error);
-    }];
+    /*
+     Initiate a request for the current Facebook session user info, and apply the username to
+     the StackMob user that might be created if one doesn't already exist.  Then login to StackMob with Facebook credentials.
+     */
+    [[FBRequest requestForMe] startWithCompletionHandler:
+     ^(FBRequestConnection *connection,
+       NSDictionary<FBGraphUser> *user,
+       NSError *error) {
+         if (!error) {
+             [self.client loginWithFacebookToken:FBSession.activeSession.accessTokenData.accessToken createUserIfNeeded:YES usernameForCreate:user.username onSuccess:^(NSDictionary *result) {
+                 NSLog(@"Logged In");
+                 [self updateView];
+             } onFailure:^(NSError *error) {
+                 NSLog(@"Error: %@", error);
+             }];
+         } else {
+             // Handle error accordingly
+             NSLog(@"Error getting current Facebook user data, %@", error);
+         }
+         
+     }];
 }
 
 
@@ -139,7 +140,7 @@
 {
     switch (state) {
         case FBSessionStateOpen:
-            [self createUser];
+            [self loginUser];
             break;
         case FBSessionStateClosed:
             [FBSession.activeSession closeAndClearTokenInformation];

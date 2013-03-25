@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1D24A57716CC74AC00604C66 /* Todo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D24A57616CC74AC00604C66 /* Todo.m */; };
 		1D24A66016CCAE5C00604C66 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = 1D24A62D16CCAE5C00604C66 /* CHANGELOG.md */; };
-		1D24A66116CCAE5C00604C66 /* libstackmob-v1.3.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D24A65F16CCAE5C00604C66 /* libstackmob-v1.3.0.a */; };
+		1D24A66116CCAE5C00604C66 /* libstackmob-v1.4.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D24A65F16CCAE5C00604C66 /* libstackmob-v1.4.0.a */; };
 		1D71D94A162E1D1F00C92DE4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D71D949162E1D1F00C92DE4 /* MapKit.framework */; };
 		1D71D94C162E1D2E00C92DE4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D71D94B162E1D2E00C92DE4 /* Security.framework */; };
 		1D71D951162E2DE900C92DE4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D71D950162E2DE900C92DE4 /* CoreLocation.framework */; };
@@ -80,7 +80,7 @@
 		1D24A65C16CCAE5C00604C66 /* Synchronization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Synchronization.h; sourceTree = "<group>"; };
 		1D24A65D16CCAE5C00604C66 /* SystemInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemInformation.h; sourceTree = "<group>"; };
 		1D24A65E16CCAE5C00604C66 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
-		1D24A65F16CCAE5C00604C66 /* libstackmob-v1.3.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libstackmob-v1.3.0.a"; sourceTree = "<group>"; };
+		1D24A65F16CCAE5C00604C66 /* libstackmob-v1.4.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libstackmob-v1.4.0.a"; sourceTree = "<group>"; };
 		1D71D949162E1D1F00C92DE4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		1D71D94B162E1D2E00C92DE4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		1D71D950162E2DE900C92DE4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -118,21 +118,21 @@
 				DE4BCB68161638D4003F4A66 /* UIKit.framework in Frameworks */,
 				DE4BCB6A161638D4003F4A66 /* Foundation.framework in Frameworks */,
 				DE4BCB6C161638D4003F4A66 /* CoreGraphics.framework in Frameworks */,
-				1D24A66116CCAE5C00604C66 /* libstackmob-v1.3.0.a in Frameworks */,
+				1D24A66116CCAE5C00604C66 /* libstackmob-v1.4.0.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1D24A62C16CCAE5C00604C66 /* StackMob-v1.3.0 */ = {
+		1D24A62C16CCAE5C00604C66 /* StackMob-v1.4.0 */ = {
 			isa = PBXGroup;
 			children = (
 				1D24A62D16CCAE5C00604C66 /* CHANGELOG.md */,
 				1D24A62E16CCAE5C00604C66 /* Headers */,
-				1D24A65F16CCAE5C00604C66 /* libstackmob-v1.3.0.a */,
+				1D24A65F16CCAE5C00604C66 /* libstackmob-v1.4.0.a */,
 			);
-			path = "StackMob-v1.3.0";
+			path = "StackMob-v1.4.0";
 			sourceTree = "<group>";
 		};
 		1D24A62E16CCAE5C00604C66 /* Headers */ = {
@@ -193,7 +193,7 @@
 		DE4BCB58161638D4003F4A66 = {
 			isa = PBXGroup;
 			children = (
-				1D24A62C16CCAE5C00604C66 /* StackMob-v1.3.0 */,
+				1D24A62C16CCAE5C00604C66 /* StackMob-v1.4.0 */,
 				DE4BCB6D161638D4003F4A66 /* geo-location */,
 				DE4BCB66161638D4003F4A66 /* Frameworks */,
 				DE4BCB64161638D4003F4A66 /* Products */,
@@ -278,7 +278,7 @@
 		DE4BCB5A161638D4003F4A66 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0440;
+				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = StackMob;
 			};
 			buildConfigurationList = DE4BCB5D161638D4003F4A66 /* Build configuration list for PBXProject "geo-location" */;
@@ -354,6 +354,9 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -381,6 +384,9 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
@@ -404,7 +410,7 @@
 				INFOPLIST_FILE = "geo-location/geo-location-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/StackMob-v1.3.0\"",
+					"\"$(SRCROOT)/StackMob-v1.4.0\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "geo-location";
@@ -420,7 +426,7 @@
 				INFOPLIST_FILE = "geo-location/geo-location-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/StackMob-v1.3.0\"",
+					"\"$(SRCROOT)/StackMob-v1.4.0\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "geo-location";

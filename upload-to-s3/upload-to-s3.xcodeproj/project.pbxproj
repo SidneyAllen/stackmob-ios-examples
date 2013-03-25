@@ -21,7 +21,7 @@
 		DEE2A466165C177E0022391A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE2A465165C177E0022391A /* SystemConfiguration.framework */; };
 		DEE2A468165C17850022391A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE2A467165C17850022391A /* MobileCoreServices.framework */; };
 		DEE2A497165C17AF0022391A /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = DEE2A46A165C17AF0022391A /* CHANGELOG.md */; };
-		DEE2A498165C17AF0022391A /* libstackmob-v1.3.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE2A496165C17AF0022391A /* libstackmob-v1.3.0.a */; };
+		DEE2A498165C17AF0022391A /* libstackmob-v1.4.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE2A496165C17AF0022391A /* libstackmob-v1.4.0.a */; };
 		DEE5C49E162F37500024001B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DEE5C49D162F37500024001B /* Default-568h@2x.png */; };
 		DEE5C4A1162F375C0024001B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE5C4A0162F375C0024001B /* Security.framework */; };
 /* End PBXBuildFile section */
@@ -87,7 +87,7 @@
 		DEE2A493165C17AF0022391A /* Synchronization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Synchronization.h; sourceTree = "<group>"; };
 		DEE2A494165C17AF0022391A /* SystemInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemInformation.h; sourceTree = "<group>"; };
 		DEE2A495165C17AF0022391A /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
-		DEE2A496165C17AF0022391A /* libstackmob-v1.3.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libstackmob-v1.3.0.a"; sourceTree = "<group>"; };
+		DEE2A496165C17AF0022391A /* libstackmob-v1.4.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libstackmob-v1.4.0.a"; sourceTree = "<group>"; };
 		DEE5C49D162F37500024001B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		DEE5C4A0162F375C0024001B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -105,7 +105,7 @@
 				DE4BCB68161638D4003F4A66 /* UIKit.framework in Frameworks */,
 				DE4BCB6A161638D4003F4A66 /* Foundation.framework in Frameworks */,
 				DE4BCB6C161638D4003F4A66 /* CoreGraphics.framework in Frameworks */,
-				DEE2A498165C17AF0022391A /* libstackmob-v1.3.0.a in Frameworks */,
+				DEE2A498165C17AF0022391A /* libstackmob-v1.4.0.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,7 +115,7 @@
 		DE4BCB58161638D4003F4A66 = {
 			isa = PBXGroup;
 			children = (
-				DEE2A469165C17AF0022391A /* StackMob-v1.3.0 */,
+				DEE2A469165C17AF0022391A /* StackMob-v1.4.0 */,
 				DE4BCB6D161638D4003F4A66 /* upload-to-s3 */,
 				DE4BCB66161638D4003F4A66 /* Frameworks */,
 				DE4BCB64161638D4003F4A66 /* Products */,
@@ -171,14 +171,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		DEE2A469165C17AF0022391A /* StackMob-v1.3.0 */ = {
+		DEE2A469165C17AF0022391A /* StackMob-v1.4.0 */ = {
 			isa = PBXGroup;
 			children = (
 				DEE2A46A165C17AF0022391A /* CHANGELOG.md */,
 				DEE2A46B165C17AF0022391A /* Headers */,
-				DEE2A496165C17AF0022391A /* libstackmob-v1.3.0.a */,
+				DEE2A496165C17AF0022391A /* libstackmob-v1.4.0.a */,
 			);
-			path = "StackMob-v1.3.0";
+			path = "StackMob-v1.4.0";
 			sourceTree = "<group>";
 		};
 		DEE2A46B165C17AF0022391A /* Headers */ = {
@@ -255,7 +255,7 @@
 		DE4BCB5A161638D4003F4A66 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0440;
+				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = StackMob;
 			};
 			buildConfigurationList = DE4BCB5D161638D4003F4A66 /* Build configuration list for PBXProject "upload-to-s3" */;
@@ -330,6 +330,9 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -357,6 +360,9 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
@@ -380,7 +386,7 @@
 				INFOPLIST_FILE = "upload-to-s3/upload-to-s3-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/StackMob-v1.3.0\"",
+					"\"$(SRCROOT)/StackMob-v1.4.0\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "upload-to-s3";
@@ -396,7 +402,7 @@
 				INFOPLIST_FILE = "upload-to-s3/upload-to-s3-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/StackMob-v1.3.0\"",
+					"\"$(SRCROOT)/StackMob-v1.4.0\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "upload-to-s3";

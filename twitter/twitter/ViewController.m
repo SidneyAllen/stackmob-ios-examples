@@ -1,10 +1,18 @@
-//
-//  ViewController.m
-//  twitter
-//
-//  Created by Matt Vaznaian on 9/28/12.
-//  Copyright (c) 2012 StackMob. All rights reserved.
-//
+/*
+ * Copyright 2012-2013 StackMob
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 
 #import "ViewController.h"
 #import "AppDelegate.h"
@@ -20,7 +28,7 @@
 @property (nonatomic, strong) NSArray *accounts;
 @property (nonatomic, strong) UIButton *reverseAuthBtn;
 
-- (void)loginWithTwitterToken:(id)oauthToken secret:(id)oauthTokenSecret;
+- (void)loginWithTwitterToken:(id)oauthToken secret:(id)oauthTokenSecret usernameForCreate:(NSString *)username;
 - (void)obtainAccessToAccountsWithBlock:(void (^)(BOOL))block;
 - (void)refreshTwitterAccounts:(id)sender;
 - (void)performReverseAuth;
@@ -111,12 +119,12 @@
     }];
 }
 
-- (void)loginWithTwitterToken:(id)oauthToken secret:(id)oauthTokenSecret {
+- (void)loginWithTwitterToken:(id)oauthToken secret:(id)oauthTokenSecret usernameForCreate:(NSString *)username {
     
     /*
-     StackMob method to login with Twitter token and secret.
+     StackMob method to login with Twitter token and secret.  A StackMob user will be created with the username provided if one doesn't already exist attached to the provided credentials.
      */
-    [[self.appDelegate client] loginWithTwitterToken:oauthToken twitterSecret:oauthTokenSecret onSuccess:^(NSDictionary *result) {
+    [[self.appDelegate client] loginWithTwitterToken:oauthToken twitterSecret:oauthTokenSecret createUserIfNeeded:YES usernameForCreate:username onSuccess:^(NSDictionary *result) {
         NSLog(@"successful login with twitter: %@", result);
     } onFailure:^(NSError *error) {
         NSLog(@"login user fail: %@", error);
@@ -162,22 +170,9 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
                  NSString *twitter_screen_name = [twitter_screen_nameArray objectAtIndex:1];
                  
                  /*
-                  Initiates creating a user on StackMob using Twitter credentials.
-                  If one already exists, attempt login.
+                  Login to StackMob using Twitter credentials.
                   */
-                 [[self.appDelegate client] createUserWithTwitterToken:oauth_token twitterSecret:oauth_token_secret username:twitter_screen_name onSuccess:^(NSDictionary *result) {
-                     
-                     NSLog(@"create user success");
-                     _oauthToken = oauth_token;
-                     _oauthTokenSecret = oauth_token_secret;
-                     [self loginWithTwitterToken:oauth_token secret:oauth_token_secret];
-                 } onFailure:^(NSError *error) {
-                     
-                     // If we get back a 401 it's probably because the user already exists, so attempt login.
-                     if (error.code == 401) {
-                         [self loginWithTwitterToken:oauth_token secret:oauth_token_secret];
-                     }
-                 }];
+                 [self loginWithTwitterToken:oauth_token secret:oauth_token_secret usernameForCreate:twitter_screen_name];
                  
              }
              else {
