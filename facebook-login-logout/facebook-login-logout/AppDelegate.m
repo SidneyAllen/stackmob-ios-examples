@@ -39,7 +39,7 @@ NSString *const SCSessionStateChangedNotification =
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    self.client = [[SMClient alloc] initWithAPIVersion:@"0" publicKey:@"4d91e555-8afd-4140-ae61-3161c1b72569"];
+    self.client = [[SMClient alloc] initWithAPIVersion:@"0" publicKey:@"YOUR_PUBLIC_KEY"];
     self.coreDataStore = [self.client coreDataStoreWithManagedObjectModel:self.managedObjectModel];
     [self.window makeKeyAndVisible];
     

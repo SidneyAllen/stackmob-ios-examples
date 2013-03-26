@@ -96,7 +96,7 @@
        NSError *error) {
          if (!error) {
              [self.client loginWithFacebookToken:FBSession.activeSession.accessTokenData.accessToken createUserIfNeeded:YES usernameForCreate:user.username onSuccess:^(NSDictionary *result) {
-                 NSLog(@"Logged In");
+                 NSLog(@"Logged in with StackMob");
                  [self updateView];
              } onFailure:^(NSError *error) {
                  NSLog(@"Error: %@", error);
@@ -113,8 +113,8 @@
 - (void)logoutUser {
     
     [self.client logoutOnSuccess:^(NSDictionary *result) {
-        NSLog(@"Logged Out");
-        [self sessionStateChanged:FBSession.activeSession state:FBSessionStateClosed error:nil];
+        NSLog(@"Logged out of StackMob");
+        [FBSession.activeSession closeAndClearTokenInformation];
     } onFailure:^(NSError *error) {
         NSLog(@"Error: %@", error);
     }];
