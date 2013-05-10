@@ -42,6 +42,16 @@
     [super viewDidLoad];
     
     self.managedObjectContext = [[self.appDelegate coreDataStore] contextForCurrentThread];
+    
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc]
+                                        init];
+    [refreshControl addTarget:self action:@selector(refreshTable) forControlEvents:UIControlEventValueChanged];
+    
+    self.refreshControl  = refreshControl;
+    
+    [refreshControl beginRefreshing];
+    
+    [self refreshTable];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -62,11 +72,30 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (NSFetchedResultsController *)fetchedResultsController
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    if (_fetchedResultsController != nil) {
-        return _fetchedResultsController;
-    }
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [self.objects count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    NSManagedObject *object = [self.objects objectAtIndex:indexPath.row];
+    cell.textLabel.text = [object valueForKey:@"title"];
+    
+    return cell;
+}
+
+- (void) refreshTable {
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     // Edit the entity name as appropriate.
@@ -79,43 +108,16 @@
     
     [fetchRequest setSortDescriptors:sortDescriptors];
     
-    
-    // Edit the section name key path and cache name if appropriate.
-    // nil for section name key path means "no sections".
-    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:@"Master"];
-    aFetchedResultsController.delegate = self;
-    self.fetchedResultsController = aFetchedResultsController;
-    
-    NSError *error = nil;
-    if (![self.fetchedResultsController performFetch:&error]) {
+    [self.managedObjectContext executeFetchRequest:fetchRequest onSuccess:^(NSArray *results) {
+        [self.refreshControl endRefreshing];
+        self.objects = results;
+        [self.tableView reloadData];
+        
+    } onFailure:^(NSError *error) {
+        
+        [self.refreshControl endRefreshing];
         NSLog(@"An error %@, %@", error, [error userInfo]);
-    }
-    
-    return _fetchedResultsController;
-}
-
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return [[self.fetchedResultsController sections] count];
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
-    return [sectionInfo numberOfObjects];
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
-    NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [object valueForKey:@"title"];
-    
-    return cell;
+    }];
 }
 
 /*

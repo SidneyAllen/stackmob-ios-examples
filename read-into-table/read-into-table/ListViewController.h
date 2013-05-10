@@ -20,6 +20,9 @@
 @interface ListViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (strong, nonatomic) NSArray *objects;
+
+
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 
 @end
