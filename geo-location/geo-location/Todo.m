@@ -19,8 +19,8 @@
 
 @implementation Todo
 
+@dynamic location;
 @dynamic title;
 @dynamic todoId;
-@dynamic location;
 
 @end

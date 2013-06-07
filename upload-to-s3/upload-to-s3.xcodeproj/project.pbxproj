@@ -20,8 +20,8 @@
 		DE4BCB8A16163987003F4A66 /* mydatamodel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE4BCB8816163987003F4A66 /* mydatamodel.xcdatamodeld */; };
 		DEE2A466165C177E0022391A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE2A465165C177E0022391A /* SystemConfiguration.framework */; };
 		DEE2A468165C17850022391A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE2A467165C17850022391A /* MobileCoreServices.framework */; };
-		DEE2A497165C17AF0022391A /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = DEE2A46A165C17AF0022391A /* CHANGELOG.md */; };
-		DEE2A498165C17AF0022391A /* libstackmob-v1.4.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE2A496165C17AF0022391A /* libstackmob-v1.4.0.a */; };
+		DEE5409E1761715A00A1B192 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = DEE540671761715A00A1B192 /* CHANGELOG.md */; };
+		DEE5409F1761715A00A1B192 /* libstackmob-v2.0.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE5409D1761715A00A1B192 /* libstackmob-v2.0.0.a */; };
 		DEE5C49E162F37500024001B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DEE5C49D162F37500024001B /* Default-568h@2x.png */; };
 		DEE5C4A1162F375C0024001B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE5C4A0162F375C0024001B /* Security.framework */; };
 /* End PBXBuildFile section */
@@ -45,49 +45,59 @@
 		DE4BCB8916163987003F4A66 /* mydatamodel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mydatamodel.xcdatamodel; sourceTree = "<group>"; };
 		DEE2A465165C177E0022391A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		DEE2A467165C17850022391A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		DEE2A46A165C17AF0022391A /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGELOG.md; sourceTree = "<group>"; };
-		DEE2A46C165C17AF0022391A /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
-		DEE2A46D165C17AF0022391A /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
-		DEE2A46E165C17AF0022391A /* AFImageRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageRequestOperation.h; sourceTree = "<group>"; };
-		DEE2A46F165C17AF0022391A /* AFJSONRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONRequestOperation.h; sourceTree = "<group>"; };
-		DEE2A471165C17AF0022391A /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
-		DEE2A472165C17AF0022391A /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
-		DEE2A473165C17AF0022391A /* AFPropertyListRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPropertyListRequestOperation.h; sourceTree = "<group>"; };
-		DEE2A474165C17AF0022391A /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
-		DEE2A475165C17AF0022391A /* AFXMLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFXMLRequestOperation.h; sourceTree = "<group>"; };
-		DEE2A476165C17AF0022391A /* Base64EncodedStringFromData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64EncodedStringFromData.h; sourceTree = "<group>"; };
-		DEE2A477165C17AF0022391A /* KeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainWrapper.h; sourceTree = "<group>"; };
-		DEE2A478165C17AF0022391A /* NSArray+Enumerable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Enumerable.h"; sourceTree = "<group>"; };
-		DEE2A479165C17AF0022391A /* NSDictionary+AtomicCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+AtomicCounter.h"; sourceTree = "<group>"; };
-		DEE2A47A165C17AF0022391A /* NSEntityDescription+StackMobSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSEntityDescription+StackMobSerialization.h"; sourceTree = "<group>"; };
-		DEE2A47B165C17AF0022391A /* NSManagedObject+StackMobSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+StackMobSerialization.h"; sourceTree = "<group>"; };
-		DEE2A47C165C17AF0022391A /* SMBinaryDataConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMBinaryDataConversion.h; sourceTree = "<group>"; };
-		DEE2A47D165C17AF0022391A /* SMClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMClient.h; sourceTree = "<group>"; };
-		DEE2A47E165C17AF0022391A /* SMCoreDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCoreDataStore.h; sourceTree = "<group>"; };
-		DEE2A47F165C17AF0022391A /* SMCustomCodeRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCustomCodeRequest.h; sourceTree = "<group>"; };
-		DEE2A480165C17AF0022391A /* SMDataStore+Protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SMDataStore+Protected.h"; sourceTree = "<group>"; };
-		DEE2A481165C17AF0022391A /* SMDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMDataStore.h; sourceTree = "<group>"; };
-		DEE2A482165C17AF0022391A /* SMError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMError.h; sourceTree = "<group>"; };
-		DEE2A483165C17AF0022391A /* SMIncrementalStore+Query.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SMIncrementalStore+Query.h"; sourceTree = "<group>"; };
-		DEE2A484165C17AF0022391A /* SMIncrementalStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMIncrementalStore.h; sourceTree = "<group>"; };
-		DEE2A485165C17AF0022391A /* SMJSONRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMJSONRequestOperation.h; sourceTree = "<group>"; };
-		DEE2A486165C17AF0022391A /* SMNetworkReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMNetworkReachability.h; sourceTree = "<group>"; };
-		DEE2A487165C17AF0022391A /* SMOAuth1Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMOAuth1Client.h; sourceTree = "<group>"; };
-		DEE2A488165C17AF0022391A /* SMOAuth2Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMOAuth2Client.h; sourceTree = "<group>"; };
-		DEE2A489165C17AF0022391A /* SMPushClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMPushClient.h; sourceTree = "<group>"; };
-		DEE2A48A165C17AF0022391A /* SMPushToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMPushToken.h; sourceTree = "<group>"; };
-		DEE2A48B165C17AF0022391A /* SMQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMQuery.h; sourceTree = "<group>"; };
-		DEE2A48C165C17AF0022391A /* SMRequestOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMRequestOptions.h; sourceTree = "<group>"; };
-		DEE2A48D165C17AF0022391A /* SMResponseBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMResponseBlocks.h; sourceTree = "<group>"; };
-		DEE2A48E165C17AF0022391A /* SMUserManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMUserManagedObject.h; sourceTree = "<group>"; };
-		DEE2A48F165C17AF0022391A /* SMUserSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMUserSession.h; sourceTree = "<group>"; };
-		DEE2A490165C17AF0022391A /* SMVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMVersion.h; sourceTree = "<group>"; };
-		DEE2A491165C17AF0022391A /* StackMob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackMob.h; sourceTree = "<group>"; };
-		DEE2A492165C17AF0022391A /* StackMobPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackMobPush.h; sourceTree = "<group>"; };
-		DEE2A493165C17AF0022391A /* Synchronization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Synchronization.h; sourceTree = "<group>"; };
-		DEE2A494165C17AF0022391A /* SystemInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemInformation.h; sourceTree = "<group>"; };
-		DEE2A495165C17AF0022391A /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
-		DEE2A496165C17AF0022391A /* libstackmob-v1.4.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libstackmob-v1.4.0.a"; sourceTree = "<group>"; };
+		DEE540671761715A00A1B192 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGELOG.md; sourceTree = "<group>"; };
+		DEE540691761715A00A1B192 /* AFHTTPClient+StackMob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFHTTPClient+StackMob.h"; sourceTree = "<group>"; };
+		DEE5406A1761715A00A1B192 /* AFHTTPRequestOperation+RemoveContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFHTTPRequestOperation+RemoveContentType.h"; sourceTree = "<group>"; };
+		DEE5406C1761715A00A1B192 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
+		DEE5406D1761715A00A1B192 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		DEE5406E1761715A00A1B192 /* AFImageRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageRequestOperation.h; sourceTree = "<group>"; };
+		DEE5406F1761715A00A1B192 /* AFJSONRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONRequestOperation.h; sourceTree = "<group>"; };
+		DEE540701761715A00A1B192 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		DEE540711761715A00A1B192 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		DEE540721761715A00A1B192 /* AFPropertyListRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPropertyListRequestOperation.h; sourceTree = "<group>"; };
+		DEE540731761715A00A1B192 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		DEE540741761715A00A1B192 /* AFXMLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFXMLRequestOperation.h; sourceTree = "<group>"; };
+		DEE540751761715A00A1B192 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		DEE540761761715A00A1B192 /* Base64EncodedStringFromData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64EncodedStringFromData.h; sourceTree = "<group>"; };
+		DEE540771761715A00A1B192 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		DEE540781761715A00A1B192 /* FileManagement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManagement.h; sourceTree = "<group>"; };
+		DEE540791761715A00A1B192 /* KeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainWrapper.h; sourceTree = "<group>"; };
+		DEE5407A1761715A00A1B192 /* NSArray+Enumerable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Enumerable.h"; sourceTree = "<group>"; };
+		DEE5407B1761715A00A1B192 /* NSDictionary+AtomicCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+AtomicCounter.h"; sourceTree = "<group>"; };
+		DEE5407C1761715A00A1B192 /* NSEntityDescription+StackMobSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSEntityDescription+StackMobSerialization.h"; sourceTree = "<group>"; };
+		DEE5407D1761715A00A1B192 /* NSManagedObject+StackMobSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+StackMobSerialization.h"; sourceTree = "<group>"; };
+		DEE5407E1761715A00A1B192 /* NSManagedObjectContext+Concurrency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+Concurrency.h"; sourceTree = "<group>"; };
+		DEE5407F1761715A00A1B192 /* SMBinaryDataConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMBinaryDataConversion.h; sourceTree = "<group>"; };
+		DEE540801761715A00A1B192 /* SMClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMClient.h; sourceTree = "<group>"; };
+		DEE540811761715A00A1B192 /* SMCoreDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCoreDataStore.h; sourceTree = "<group>"; };
+		DEE540821761715A00A1B192 /* SMCustomCodeRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCustomCodeRequest.h; sourceTree = "<group>"; };
+		DEE540831761715A00A1B192 /* SMDataStore+Protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SMDataStore+Protected.h"; sourceTree = "<group>"; };
+		DEE540841761715A00A1B192 /* SMDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMDataStore.h; sourceTree = "<group>"; };
+		DEE540851761715A00A1B192 /* SMError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMError.h; sourceTree = "<group>"; };
+		DEE540861761715A00A1B192 /* SMGeoPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMGeoPoint.h; sourceTree = "<group>"; };
+		DEE540871761715A00A1B192 /* SMIncrementalStore+Query.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SMIncrementalStore+Query.h"; sourceTree = "<group>"; };
+		DEE540881761715A00A1B192 /* SMIncrementalStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMIncrementalStore.h; sourceTree = "<group>"; };
+		DEE540891761715A00A1B192 /* SMIncrementalStoreNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMIncrementalStoreNode.h; sourceTree = "<group>"; };
+		DEE5408A1761715A00A1B192 /* SMJSONRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMJSONRequestOperation.h; sourceTree = "<group>"; };
+		DEE5408B1761715A00A1B192 /* SMLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLocationManager.h; sourceTree = "<group>"; };
+		DEE5408C1761715A00A1B192 /* SMNetworkReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMNetworkReachability.h; sourceTree = "<group>"; };
+		DEE5408D1761715A00A1B192 /* SMOAuth1Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMOAuth1Client.h; sourceTree = "<group>"; };
+		DEE5408E1761715A00A1B192 /* SMOAuth2Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMOAuth2Client.h; sourceTree = "<group>"; };
+		DEE5408F1761715A00A1B192 /* SMPredicate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMPredicate.h; sourceTree = "<group>"; };
+		DEE540901761715A00A1B192 /* SMPushClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMPushClient.h; sourceTree = "<group>"; };
+		DEE540911761715A00A1B192 /* SMPushToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMPushToken.h; sourceTree = "<group>"; };
+		DEE540921761715A00A1B192 /* SMQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMQuery.h; sourceTree = "<group>"; };
+		DEE540931761715A00A1B192 /* SMRequestOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMRequestOptions.h; sourceTree = "<group>"; };
+		DEE540941761715A00A1B192 /* SMResponseBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMResponseBlocks.h; sourceTree = "<group>"; };
+		DEE540951761715A00A1B192 /* SMSyncedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMSyncedObject.h; sourceTree = "<group>"; };
+		DEE540961761715A00A1B192 /* SMUserManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMUserManagedObject.h; sourceTree = "<group>"; };
+		DEE540971761715A00A1B192 /* SMUserSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMUserSession.h; sourceTree = "<group>"; };
+		DEE540981761715A00A1B192 /* SMVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMVersion.h; sourceTree = "<group>"; };
+		DEE540991761715A00A1B192 /* StackMob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackMob.h; sourceTree = "<group>"; };
+		DEE5409A1761715A00A1B192 /* StackMobPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackMobPush.h; sourceTree = "<group>"; };
+		DEE5409B1761715A00A1B192 /* Synchronization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Synchronization.h; sourceTree = "<group>"; };
+		DEE5409C1761715A00A1B192 /* SystemInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemInformation.h; sourceTree = "<group>"; };
+		DEE5409D1761715A00A1B192 /* libstackmob-v2.0.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libstackmob-v2.0.0.a"; sourceTree = "<group>"; };
 		DEE5C49D162F37500024001B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		DEE5C4A0162F375C0024001B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -105,7 +115,7 @@
 				DE4BCB68161638D4003F4A66 /* UIKit.framework in Frameworks */,
 				DE4BCB6A161638D4003F4A66 /* Foundation.framework in Frameworks */,
 				DE4BCB6C161638D4003F4A66 /* CoreGraphics.framework in Frameworks */,
-				DEE2A498165C17AF0022391A /* libstackmob-v1.4.0.a in Frameworks */,
+				DEE5409F1761715A00A1B192 /* libstackmob-v2.0.0.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,7 +125,7 @@
 		DE4BCB58161638D4003F4A66 = {
 			isa = PBXGroup;
 			children = (
-				DEE2A469165C17AF0022391A /* StackMob-v1.4.0 */,
+				DEE540661761715A00A1B192 /* StackMob-v2.0.0 */,
 				DE4BCB6D161638D4003F4A66 /* upload-to-s3 */,
 				DE4BCB66161638D4003F4A66 /* Frameworks */,
 				DE4BCB64161638D4003F4A66 /* Products */,
@@ -171,62 +181,80 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		DEE2A469165C17AF0022391A /* StackMob-v1.4.0 */ = {
+		DEE540661761715A00A1B192 /* StackMob-v2.0.0 */ = {
 			isa = PBXGroup;
 			children = (
-				DEE2A46A165C17AF0022391A /* CHANGELOG.md */,
-				DEE2A46B165C17AF0022391A /* Headers */,
-				DEE2A496165C17AF0022391A /* libstackmob-v1.4.0.a */,
+				DEE540671761715A00A1B192 /* CHANGELOG.md */,
+				DEE540681761715A00A1B192 /* Headers */,
+				DEE5409D1761715A00A1B192 /* libstackmob-v2.0.0.a */,
 			);
-			path = "StackMob-v1.4.0";
+			path = "StackMob-v2.0.0";
 			sourceTree = "<group>";
 		};
-		DEE2A46B165C17AF0022391A /* Headers */ = {
+		DEE540681761715A00A1B192 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
-				DEE2A46C165C17AF0022391A /* AFHTTPClient.h */,
-				DEE2A46D165C17AF0022391A /* AFHTTPRequestOperation.h */,
-				DEE2A46E165C17AF0022391A /* AFImageRequestOperation.h */,
-				DEE2A46F165C17AF0022391A /* AFJSONRequestOperation.h */,
-				DEE2A471165C17AF0022391A /* AFNetworkActivityIndicatorManager.h */,
-				DEE2A472165C17AF0022391A /* AFNetworking.h */,
-				DEE2A473165C17AF0022391A /* AFPropertyListRequestOperation.h */,
-				DEE2A474165C17AF0022391A /* AFURLConnectionOperation.h */,
-				DEE2A475165C17AF0022391A /* AFXMLRequestOperation.h */,
-				DEE2A476165C17AF0022391A /* Base64EncodedStringFromData.h */,
-				DEE2A477165C17AF0022391A /* KeychainWrapper.h */,
-				DEE2A478165C17AF0022391A /* NSArray+Enumerable.h */,
-				DEE2A479165C17AF0022391A /* NSDictionary+AtomicCounter.h */,
-				DEE2A47A165C17AF0022391A /* NSEntityDescription+StackMobSerialization.h */,
-				DEE2A47B165C17AF0022391A /* NSManagedObject+StackMobSerialization.h */,
-				DEE2A47C165C17AF0022391A /* SMBinaryDataConversion.h */,
-				DEE2A47D165C17AF0022391A /* SMClient.h */,
-				DEE2A47E165C17AF0022391A /* SMCoreDataStore.h */,
-				DEE2A47F165C17AF0022391A /* SMCustomCodeRequest.h */,
-				DEE2A480165C17AF0022391A /* SMDataStore+Protected.h */,
-				DEE2A481165C17AF0022391A /* SMDataStore.h */,
-				DEE2A482165C17AF0022391A /* SMError.h */,
-				DEE2A483165C17AF0022391A /* SMIncrementalStore+Query.h */,
-				DEE2A484165C17AF0022391A /* SMIncrementalStore.h */,
-				DEE2A485165C17AF0022391A /* SMJSONRequestOperation.h */,
-				DEE2A486165C17AF0022391A /* SMNetworkReachability.h */,
-				DEE2A487165C17AF0022391A /* SMOAuth1Client.h */,
-				DEE2A488165C17AF0022391A /* SMOAuth2Client.h */,
-				DEE2A489165C17AF0022391A /* SMPushClient.h */,
-				DEE2A48A165C17AF0022391A /* SMPushToken.h */,
-				DEE2A48B165C17AF0022391A /* SMQuery.h */,
-				DEE2A48C165C17AF0022391A /* SMRequestOptions.h */,
-				DEE2A48D165C17AF0022391A /* SMResponseBlocks.h */,
-				DEE2A48E165C17AF0022391A /* SMUserManagedObject.h */,
-				DEE2A48F165C17AF0022391A /* SMUserSession.h */,
-				DEE2A490165C17AF0022391A /* SMVersion.h */,
-				DEE2A491165C17AF0022391A /* StackMob.h */,
-				DEE2A492165C17AF0022391A /* StackMobPush.h */,
-				DEE2A493165C17AF0022391A /* Synchronization.h */,
-				DEE2A494165C17AF0022391A /* SystemInformation.h */,
-				DEE2A495165C17AF0022391A /* UIImageView+AFNetworking.h */,
+				DEE540691761715A00A1B192 /* AFHTTPClient+StackMob.h */,
+				DEE5406A1761715A00A1B192 /* AFHTTPRequestOperation+RemoveContentType.h */,
+				DEE5406B1761715A00A1B192 /* AFNetworking */,
+				DEE540761761715A00A1B192 /* Base64EncodedStringFromData.h */,
+				DEE540771761715A00A1B192 /* Common.h */,
+				DEE540781761715A00A1B192 /* FileManagement.h */,
+				DEE540791761715A00A1B192 /* KeychainWrapper.h */,
+				DEE5407A1761715A00A1B192 /* NSArray+Enumerable.h */,
+				DEE5407B1761715A00A1B192 /* NSDictionary+AtomicCounter.h */,
+				DEE5407C1761715A00A1B192 /* NSEntityDescription+StackMobSerialization.h */,
+				DEE5407D1761715A00A1B192 /* NSManagedObject+StackMobSerialization.h */,
+				DEE5407E1761715A00A1B192 /* NSManagedObjectContext+Concurrency.h */,
+				DEE5407F1761715A00A1B192 /* SMBinaryDataConversion.h */,
+				DEE540801761715A00A1B192 /* SMClient.h */,
+				DEE540811761715A00A1B192 /* SMCoreDataStore.h */,
+				DEE540821761715A00A1B192 /* SMCustomCodeRequest.h */,
+				DEE540831761715A00A1B192 /* SMDataStore+Protected.h */,
+				DEE540841761715A00A1B192 /* SMDataStore.h */,
+				DEE540851761715A00A1B192 /* SMError.h */,
+				DEE540861761715A00A1B192 /* SMGeoPoint.h */,
+				DEE540871761715A00A1B192 /* SMIncrementalStore+Query.h */,
+				DEE540881761715A00A1B192 /* SMIncrementalStore.h */,
+				DEE540891761715A00A1B192 /* SMIncrementalStoreNode.h */,
+				DEE5408A1761715A00A1B192 /* SMJSONRequestOperation.h */,
+				DEE5408B1761715A00A1B192 /* SMLocationManager.h */,
+				DEE5408C1761715A00A1B192 /* SMNetworkReachability.h */,
+				DEE5408D1761715A00A1B192 /* SMOAuth1Client.h */,
+				DEE5408E1761715A00A1B192 /* SMOAuth2Client.h */,
+				DEE5408F1761715A00A1B192 /* SMPredicate.h */,
+				DEE540901761715A00A1B192 /* SMPushClient.h */,
+				DEE540911761715A00A1B192 /* SMPushToken.h */,
+				DEE540921761715A00A1B192 /* SMQuery.h */,
+				DEE540931761715A00A1B192 /* SMRequestOptions.h */,
+				DEE540941761715A00A1B192 /* SMResponseBlocks.h */,
+				DEE540951761715A00A1B192 /* SMSyncedObject.h */,
+				DEE540961761715A00A1B192 /* SMUserManagedObject.h */,
+				DEE540971761715A00A1B192 /* SMUserSession.h */,
+				DEE540981761715A00A1B192 /* SMVersion.h */,
+				DEE540991761715A00A1B192 /* StackMob.h */,
+				DEE5409A1761715A00A1B192 /* StackMobPush.h */,
+				DEE5409B1761715A00A1B192 /* Synchronization.h */,
+				DEE5409C1761715A00A1B192 /* SystemInformation.h */,
 			);
 			path = Headers;
+			sourceTree = "<group>";
+		};
+		DEE5406B1761715A00A1B192 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				DEE5406C1761715A00A1B192 /* AFHTTPClient.h */,
+				DEE5406D1761715A00A1B192 /* AFHTTPRequestOperation.h */,
+				DEE5406E1761715A00A1B192 /* AFImageRequestOperation.h */,
+				DEE5406F1761715A00A1B192 /* AFJSONRequestOperation.h */,
+				DEE540701761715A00A1B192 /* AFNetworkActivityIndicatorManager.h */,
+				DEE540711761715A00A1B192 /* AFNetworking.h */,
+				DEE540721761715A00A1B192 /* AFPropertyListRequestOperation.h */,
+				DEE540731761715A00A1B192 /* AFURLConnectionOperation.h */,
+				DEE540741761715A00A1B192 /* AFXMLRequestOperation.h */,
+				DEE540751761715A00A1B192 /* UIImageView+AFNetworking.h */,
+			);
+			path = AFNetworking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,7 +311,7 @@
 				DE4BCB72161638D4003F4A66 /* InfoPlist.strings in Resources */,
 				DE4BCB7B161638D4003F4A66 /* MainStoryboard.storyboard in Resources */,
 				DEE5C49E162F37500024001B /* Default-568h@2x.png in Resources */,
-				DEE2A497165C17AF0022391A /* CHANGELOG.md in Resources */,
+				DEE5409E1761715A00A1B192 /* CHANGELOG.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,7 +414,7 @@
 				INFOPLIST_FILE = "upload-to-s3/upload-to-s3-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/StackMob-v1.4.0\"",
+					"\"$(SRCROOT)/StackMob-v2.0.0\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "upload-to-s3";
@@ -402,7 +430,7 @@
 				INFOPLIST_FILE = "upload-to-s3/upload-to-s3-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/StackMob-v1.4.0\"",
+					"\"$(SRCROOT)/StackMob-v2.0.0\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "upload-to-s3";

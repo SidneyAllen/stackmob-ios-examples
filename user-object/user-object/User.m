@@ -16,10 +16,14 @@
 
 #import "User.h"
 
+
 @implementation User
 
 @dynamic username;
 
+/*
+ In our init method we insert a new User managed object in the provided managed object context.
+ */
 - (id)initIntoManagedObjectContext:(NSManagedObjectContext *)context {
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"User" inManagedObjectContext:context];
     self = [super initWithEntity:entity insertIntoManagedObjectContext:context];

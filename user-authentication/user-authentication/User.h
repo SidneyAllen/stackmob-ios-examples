@@ -16,8 +16,8 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
-#import "StackMob.h"
 
+#import "StackMob.h"
 
 @interface User : SMUserManagedObject
 
