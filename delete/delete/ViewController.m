@@ -17,7 +17,11 @@
 #import "ViewController.h"
 #import "AppDelegate.h"
 
-@interface ViewController ()
+@interface ViewController () {
+    NSManagedObject *aManagedObject;
+}
+
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @end
 
@@ -25,17 +29,13 @@
 
 @synthesize managedObjectContext = _managedObjectContext;
 
-- (AppDelegate *)appDelegate {
-    return (AppDelegate *)[[UIApplication sharedApplication] delegate];
-}
-
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.managedObjectContext = [[self.appDelegate coreDataStore] contextForCurrentThread];
+    self.managedObjectContext = [[[SMClient defaultClient] coreDataStore] contextForCurrentThread];
     
     NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:@"Todo" inManagedObjectContext:self.managedObjectContext];
     

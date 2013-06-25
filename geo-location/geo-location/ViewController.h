@@ -17,9 +17,8 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
-@interface ViewController : UIViewController <MKMapViewDelegate> 
+@interface ViewController : UIViewController <MKMapViewDelegate>
 
-@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 - (IBAction)saveLocation:(id)sender;

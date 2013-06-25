@@ -22,6 +22,8 @@
 
 @dynamic title;
 @dynamic todoId;
+@dynamic createddate;
+@dynamic lastmoddate;
 @dynamic categories;
 
 @end

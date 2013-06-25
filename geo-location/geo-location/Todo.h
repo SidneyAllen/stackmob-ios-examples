@@ -23,5 +23,7 @@
 @property (nonatomic, retain) id location;
 @property (nonatomic, retain) NSString * title;
 @property (nonatomic, retain) NSString * todoId;
+@property (nonatomic, retain) NSDate * createddate;
+@property (nonatomic, retain) NSDate * lastmoddate;
 
 @end

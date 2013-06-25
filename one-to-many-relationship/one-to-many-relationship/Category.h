@@ -23,6 +23,8 @@
 
 @property (nonatomic, retain) NSString * categoryId;
 @property (nonatomic, retain) NSString * name;
+@property (nonatomic, retain) NSDate * createddate;
+@property (nonatomic, retain) NSDate * lastmoddate;
 @property (nonatomic, retain) Todo *todo;
 
 @end

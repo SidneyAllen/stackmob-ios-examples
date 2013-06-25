@@ -22,6 +22,8 @@
 
 @dynamic categoryId;
 @dynamic name;
+@dynamic createddate;
+@dynamic lastmoddate;
 @dynamic todo;
 
 @end

@@ -19,11 +19,11 @@
 		DE4BCB871616392E003F4A66 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4BCB861616392E003F4A66 /* CoreData.framework */; };
 		DE4BCB8A16163987003F4A66 /* mydatamodel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE4BCB8816163987003F4A66 /* mydatamodel.xcdatamodeld */; };
 		DE8F0B7C162CC77D00FC47C1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE8F0B7B162CC77D00FC47C1 /* Security.framework */; };
+		DEAA26C6177A271700A6F62F /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAA26C5177A271700A6F62F /* User.m */; };
 		DEE2A453165C16D90022391A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE2A452165C16D90022391A /* SystemConfiguration.framework */; };
 		DEE2A456165C16DF0022391A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE2A455165C16DF0022391A /* MobileCoreServices.framework */; };
 		DEE54115176172D100A1B192 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = DEE540DE176172D100A1B192 /* CHANGELOG.md */; };
 		DEE54116176172D100A1B192 /* libstackmob-v2.0.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE54114176172D100A1B192 /* libstackmob-v2.0.0.a */; };
-		DEE54119176172F900A1B192 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE54118176172F900A1B192 /* User.m */; };
 		DEE5C406162F2BEE0024001B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DEE5C405162F2BEE0024001B /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +45,8 @@
 		DE4BCB861616392E003F4A66 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		DE4BCB8916163987003F4A66 /* mydatamodel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mydatamodel.xcdatamodel; sourceTree = "<group>"; };
 		DE8F0B7B162CC77D00FC47C1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		DEAA26C4177A271700A6F62F /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		DEAA26C5177A271700A6F62F /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		DEE2A452165C16D90022391A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		DEE2A455165C16DF0022391A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		DEE540DE176172D100A1B192 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGELOG.md; sourceTree = "<group>"; };
@@ -100,8 +102,6 @@
 		DEE54112176172D100A1B192 /* Synchronization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Synchronization.h; sourceTree = "<group>"; };
 		DEE54113176172D100A1B192 /* SystemInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemInformation.h; sourceTree = "<group>"; };
 		DEE54114176172D100A1B192 /* libstackmob-v2.0.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libstackmob-v2.0.0.a"; sourceTree = "<group>"; };
-		DEE54117176172F900A1B192 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
-		DEE54118176172F900A1B192 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		DEE5C405162F2BEE0024001B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -167,9 +167,9 @@
 				DE4BCB7C161638D4003F4A66 /* ViewController.h */,
 				DE4BCB7D161638D4003F4A66 /* ViewController.m */,
 				DE4BCB6E161638D4003F4A66 /* Supporting Files */,
-				DEE54117176172F900A1B192 /* User.h */,
-				DEE54118176172F900A1B192 /* User.m */,
 				DE4BCB8816163987003F4A66 /* mydatamodel.xcdatamodeld */,
+				DEAA26C4177A271700A6F62F /* User.h */,
+				DEAA26C5177A271700A6F62F /* User.m */,
 			);
 			path = "user-object";
 			sourceTree = "<group>";
@@ -331,7 +331,7 @@
 				DE4BCB78161638D4003F4A66 /* AppDelegate.m in Sources */,
 				DE4BCB7E161638D4003F4A66 /* ViewController.m in Sources */,
 				DE4BCB8A16163987003F4A66 /* mydatamodel.xcdatamodeld in Sources */,
-				DEE54119176172F900A1B192 /* User.m in Sources */,
+				DEAA26C6177A271700A6F62F /* User.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

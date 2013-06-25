@@ -10,8 +10,6 @@
 		1D24A66F16CCAF1A00604C66 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D24A66E16CCAF1A00604C66 /* CoreLocation.framework */; };
 		DE342737176138420033B419 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = DE342700176138420033B419 /* CHANGELOG.md */; };
 		DE342738176138420033B419 /* libstackmob-v2.0.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE342736176138420033B419 /* libstackmob-v2.0.0.a */; };
-		DE34273B176138800033B419 /* Todo.m in Sources */ = {isa = PBXBuildFile; fileRef = DE34273A176138800033B419 /* Todo.m */; };
-		DE34273E1761388F0033B419 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = DE34273D1761388F0033B419 /* Category.m */; };
 		DE4BCB68161638D4003F4A66 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4BCB67161638D4003F4A66 /* UIKit.framework */; };
 		DE4BCB6A161638D4003F4A66 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4BCB69161638D4003F4A66 /* Foundation.framework */; };
 		DE4BCB6C161638D4003F4A66 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4BCB6B161638D4003F4A66 /* CoreGraphics.framework */; };
@@ -22,6 +20,8 @@
 		DE4BCB7E161638D4003F4A66 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4BCB7D161638D4003F4A66 /* ViewController.m */; };
 		DE4BCB871616392E003F4A66 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4BCB861616392E003F4A66 /* CoreData.framework */; };
 		DE4BCB8A16163987003F4A66 /* mydatamodel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE4BCB8816163987003F4A66 /* mydatamodel.xcdatamodeld */; };
+		DEAA26C9177A3D0300A6F62F /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAA26C8177A3D0300A6F62F /* Category.m */; };
+		DEAA26CC177A3D0E00A6F62F /* Todo.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAA26CB177A3D0E00A6F62F /* Todo.m */; };
 		DEE2A42F165C15D60022391A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE2A42E165C15D60022391A /* SystemConfiguration.framework */; };
 		DEE2A432165C15DB0022391A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE2A431165C15DB0022391A /* MobileCoreServices.framework */; };
 		DEE5C47A162F36B10024001B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DEE5C479162F36B10024001B /* Default-568h@2x.png */; };
@@ -83,10 +83,6 @@
 		DE342734176138420033B419 /* Synchronization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Synchronization.h; sourceTree = "<group>"; };
 		DE342735176138420033B419 /* SystemInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemInformation.h; sourceTree = "<group>"; };
 		DE342736176138420033B419 /* libstackmob-v2.0.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libstackmob-v2.0.0.a"; sourceTree = "<group>"; };
-		DE342739176138800033B419 /* Todo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Todo.h; sourceTree = "<group>"; };
-		DE34273A176138800033B419 /* Todo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Todo.m; sourceTree = "<group>"; };
-		DE34273C1761388F0033B419 /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
-		DE34273D1761388F0033B419 /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Category.m; sourceTree = "<group>"; };
 		DE4BCB63161638D4003F4A66 /* one-to-one-relationship.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "one-to-one-relationship.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE4BCB67161638D4003F4A66 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DE4BCB69161638D4003F4A66 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -102,6 +98,10 @@
 		DE4BCB7D161638D4003F4A66 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		DE4BCB861616392E003F4A66 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		DE4BCB8916163987003F4A66 /* mydatamodel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mydatamodel.xcdatamodel; sourceTree = "<group>"; };
+		DEAA26C7177A3D0300A6F62F /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
+		DEAA26C8177A3D0300A6F62F /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Category.m; sourceTree = "<group>"; };
+		DEAA26CA177A3D0E00A6F62F /* Todo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Todo.h; sourceTree = "<group>"; };
+		DEAA26CB177A3D0E00A6F62F /* Todo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Todo.m; sourceTree = "<group>"; };
 		DEE2A42E165C15D60022391A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		DEE2A431165C15DB0022391A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		DEE5C479162F36B10024001B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -246,11 +246,11 @@
 				DE4BCB7C161638D4003F4A66 /* ViewController.h */,
 				DE4BCB7D161638D4003F4A66 /* ViewController.m */,
 				DE4BCB6E161638D4003F4A66 /* Supporting Files */,
+				DEAA26C7177A3D0300A6F62F /* Category.h */,
+				DEAA26C8177A3D0300A6F62F /* Category.m */,
+				DEAA26CA177A3D0E00A6F62F /* Todo.h */,
+				DEAA26CB177A3D0E00A6F62F /* Todo.m */,
 				DE4BCB8816163987003F4A66 /* mydatamodel.xcdatamodeld */,
-				DE34273C1761388F0033B419 /* Category.h */,
-				DE34273D1761388F0033B419 /* Category.m */,
-				DE342739176138800033B419 /* Todo.h */,
-				DE34273A176138800033B419 /* Todo.m */,
 			);
 			path = "one-to-one-relationship";
 			sourceTree = "<group>";
@@ -336,8 +336,8 @@
 				DE4BCB78161638D4003F4A66 /* AppDelegate.m in Sources */,
 				DE4BCB7E161638D4003F4A66 /* ViewController.m in Sources */,
 				DE4BCB8A16163987003F4A66 /* mydatamodel.xcdatamodeld in Sources */,
-				DE34273B176138800033B419 /* Todo.m in Sources */,
-				DE34273E1761388F0033B419 /* Category.m in Sources */,
+				DEAA26C9177A3D0300A6F62F /* Category.m in Sources */,
+				DEAA26CC177A3D0E00A6F62F /* Todo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

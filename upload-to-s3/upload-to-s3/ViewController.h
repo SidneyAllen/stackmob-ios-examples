@@ -18,8 +18,6 @@
 
 @interface ViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
-@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-
 - (IBAction)fileUpload:(id)sender;
 
 @end

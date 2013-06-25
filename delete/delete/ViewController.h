@@ -18,11 +18,6 @@
 #import "StackMob.h"
 
 @interface ViewController : UIViewController
-{
-    NSManagedObject *aManagedObject;
-}
-
-@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 - (IBAction)deleteObject:(id)sender;
 

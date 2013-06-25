@@ -20,13 +20,15 @@
 
 @interface ListViewController ()
 
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (strong, nonatomic) NSArray *objects;
+
 @end
 
 @implementation ListViewController
 
-- (AppDelegate *)appDelegate {
-    return (AppDelegate *)[[UIApplication sharedApplication] delegate];
-}
+@synthesize managedObjectContext = _managedObjectContext;
+@synthesize objects = _objects;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -41,7 +43,7 @@
 {
     [super viewDidLoad];
     
-    self.managedObjectContext = [[self.appDelegate coreDataStore] contextForCurrentThread];
+    self.managedObjectContext = [[[SMClient defaultClient] coreDataStore] contextForCurrentThread];
     
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc]
                                         init];

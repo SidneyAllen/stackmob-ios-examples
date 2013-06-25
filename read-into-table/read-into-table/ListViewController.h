@@ -19,7 +19,4 @@
 
 @interface ListViewController : UITableViewController
 
-@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-@property (strong, nonatomic) NSArray *objects;
-
 @end

@@ -28,15 +28,13 @@ Import the Todo header file.
 
 @interface ViewController ()
 
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+
 @end
 
 @implementation ViewController
 
 @synthesize managedObjectContext = _managedObjectContext;
-
-- (AppDelegate *)appDelegate {
-    return (AppDelegate *)[[UIApplication sharedApplication] delegate];
-}
 
 
 - (void)viewDidLoad
@@ -49,7 +47,7 @@ Import the Todo header file.
      */
     _mapView.delegate = self;
     
-    self.managedObjectContext = [[self.appDelegate coreDataStore] contextForCurrentThread];
+    self.managedObjectContext = [[[SMClient defaultClient] coreDataStore] contextForCurrentThread];
 }
 
 - (void)viewDidUnload

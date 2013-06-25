@@ -20,6 +20,8 @@
 @implementation User
 
 @dynamic username;
+@dynamic createddate;
+@dynamic lastmoddate;
 
 /*
  In our init method we insert a new User managed object in the provided managed object context.

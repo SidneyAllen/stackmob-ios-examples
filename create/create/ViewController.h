@@ -18,8 +18,6 @@
 
 @interface ViewController : UIViewController <UITextFieldDelegate>
 
-@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-
 @property (weak, nonatomic) IBOutlet UITextField *titleField;
 
 - (IBAction)createNewObject:(id)sender;
