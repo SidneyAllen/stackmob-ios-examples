@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1D24A67616CCAF5D00604C66 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D24A67516CCAF5D00604C66 /* CoreLocation.framework */; };
 		DE342777176138D90033B419 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = DE342740176138D90033B419 /* CHANGELOG.md */; };
-		DE342778176138D90033B419 /* libstackmob-v2.0.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE342776176138D90033B419 /* libstackmob-v2.0.0.a */; };
+		DE342778176138D90033B419 /* libstackmob-v2.1.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE342776176138D90033B419 /* libstackmob-v2.1.0.a */; };
 		DE4BCB68161638D4003F4A66 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4BCB67161638D4003F4A66 /* UIKit.framework */; };
 		DE4BCB6A161638D4003F4A66 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4BCB69161638D4003F4A66 /* Foundation.framework */; };
 		DE4BCB6C161638D4003F4A66 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4BCB6B161638D4003F4A66 /* CoreGraphics.framework */; };
@@ -80,7 +80,7 @@
 		DE342773176138D90033B419 /* StackMobPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackMobPush.h; sourceTree = "<group>"; };
 		DE342774176138D90033B419 /* Synchronization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Synchronization.h; sourceTree = "<group>"; };
 		DE342775176138D90033B419 /* SystemInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemInformation.h; sourceTree = "<group>"; };
-		DE342776176138D90033B419 /* libstackmob-v2.0.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libstackmob-v2.0.0.a"; sourceTree = "<group>"; };
+		DE342776176138D90033B419 /* libstackmob-v2.1.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libstackmob-v2.1.0.a"; sourceTree = "<group>"; };
 		DE4BCB63161638D4003F4A66 /* push-notifications.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "push-notifications.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE4BCB67161638D4003F4A66 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DE4BCB69161638D4003F4A66 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -115,21 +115,21 @@
 				DE4BCB68161638D4003F4A66 /* UIKit.framework in Frameworks */,
 				DE4BCB6A161638D4003F4A66 /* Foundation.framework in Frameworks */,
 				DE4BCB6C161638D4003F4A66 /* CoreGraphics.framework in Frameworks */,
-				DE342778176138D90033B419 /* libstackmob-v2.0.0.a in Frameworks */,
+				DE342778176138D90033B419 /* libstackmob-v2.1.0.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DE34273F176138D90033B419 /* StackMob-v2.0.0 */ = {
+		DE34273F176138D90033B419 /* StackMob-v2.1.0 */ = {
 			isa = PBXGroup;
 			children = (
 				DE342740176138D90033B419 /* CHANGELOG.md */,
 				DE342741176138D90033B419 /* Headers */,
-				DE342776176138D90033B419 /* libstackmob-v2.0.0.a */,
+				DE342776176138D90033B419 /* libstackmob-v2.1.0.a */,
 			);
-			path = "StackMob-v2.0.0";
+			path = "StackMob-v2.1.0";
 			sourceTree = "<group>";
 		};
 		DE342741176138D90033B419 /* Headers */ = {
@@ -201,7 +201,7 @@
 		DE4BCB58161638D4003F4A66 = {
 			isa = PBXGroup;
 			children = (
-				DE34273F176138D90033B419 /* StackMob-v2.0.0 */,
+				DE34273F176138D90033B419 /* StackMob-v2.1.0 */,
 				DE4BCB6D161638D4003F4A66 /* push-notifications */,
 				DE4BCB66161638D4003F4A66 /* Frameworks */,
 				DE4BCB64161638D4003F4A66 /* Products */,
@@ -416,7 +416,7 @@
 				INFOPLIST_FILE = "push-notifications/push-notifications-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/StackMob-v2.0.0\"",
+					"\"$(SRCROOT)/StackMob-v2.1.0\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "push-notifications";
@@ -432,7 +432,7 @@
 				INFOPLIST_FILE = "push-notifications/push-notifications-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/StackMob-v2.0.0\"",
+					"\"$(SRCROOT)/StackMob-v2.1.0\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "push-notifications";

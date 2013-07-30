@@ -30,7 +30,7 @@
 		DEE2A3E3165C14100022391A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE2A3E2165C14100022391A /* SystemConfiguration.framework */; };
 		DEE2A3E6165C14160022391A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE2A3E5165C14160022391A /* MobileCoreServices.framework */; };
 		DEE5402A176170C800A1B192 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = DEE53FF3176170C800A1B192 /* CHANGELOG.md */; };
-		DEE5402B176170C800A1B192 /* libstackmob-v2.0.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE54029176170C800A1B192 /* libstackmob-v2.0.0.a */; };
+		DEE5402B176170C800A1B192 /* libstackmob-v2.1.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE54029176170C800A1B192 /* libstackmob-v2.1.0.a */; };
 		DEE5C433162F34B80024001B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE5C432162F34B80024001B /* Security.framework */; };
 /* End PBXBuildFile section */
 
@@ -119,7 +119,7 @@
 		DEE54026176170C800A1B192 /* StackMobPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackMobPush.h; sourceTree = "<group>"; };
 		DEE54027176170C800A1B192 /* Synchronization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Synchronization.h; sourceTree = "<group>"; };
 		DEE54028176170C800A1B192 /* SystemInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemInformation.h; sourceTree = "<group>"; };
-		DEE54029176170C800A1B192 /* libstackmob-v2.0.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libstackmob-v2.0.0.a"; sourceTree = "<group>"; };
+		DEE54029176170C800A1B192 /* libstackmob-v2.1.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libstackmob-v2.1.0.a"; sourceTree = "<group>"; };
 		DEE5C432162F34B80024001B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -139,7 +139,7 @@
 				DE4BCB68161638D4003F4A66 /* UIKit.framework in Frameworks */,
 				DE4BCB6A161638D4003F4A66 /* Foundation.framework in Frameworks */,
 				DE4BCB6C161638D4003F4A66 /* CoreGraphics.framework in Frameworks */,
-				DEE5402B176170C800A1B192 /* libstackmob-v2.0.0.a in Frameworks */,
+				DEE5402B176170C800A1B192 /* libstackmob-v2.1.0.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,7 +193,7 @@
 		DE4BCB58161638D4003F4A66 = {
 			isa = PBXGroup;
 			children = (
-				DEE53FF2176170C800A1B192 /* StackMob-v2.0.0 */,
+				DEE53FF2176170C800A1B192 /* StackMob-v2.1.0 */,
 				DE142D0516DD45EB00B45911 /* twitter */,
 				DE4BCB66161638D4003F4A66 /* Frameworks */,
 				DE4BCB64161638D4003F4A66 /* Products */,
@@ -226,14 +226,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DEE53FF2176170C800A1B192 /* StackMob-v2.0.0 */ = {
+		DEE53FF2176170C800A1B192 /* StackMob-v2.1.0 */ = {
 			isa = PBXGroup;
 			children = (
 				DEE53FF3176170C800A1B192 /* CHANGELOG.md */,
 				DEE53FF4176170C800A1B192 /* Headers */,
-				DEE54029176170C800A1B192 /* libstackmob-v2.0.0.a */,
+				DEE54029176170C800A1B192 /* libstackmob-v2.1.0.a */,
 			);
-			path = "StackMob-v2.0.0";
+			path = "StackMob-v2.1.0";
 			sourceTree = "<group>";
 		};
 		DEE53FF4176170C800A1B192 /* Headers */ = {
@@ -464,7 +464,7 @@
 				INFOPLIST_FILE = "twitter/twitter-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/StackMob-v2.0.0\"",
+					"\"$(SRCROOT)/StackMob-v2.1.0\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = twitter;
@@ -480,7 +480,7 @@
 				INFOPLIST_FILE = "twitter/twitter-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/StackMob-v2.0.0\"",
+					"\"$(SRCROOT)/StackMob-v2.1.0\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = twitter;
