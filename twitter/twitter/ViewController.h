@@ -16,12 +16,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController <UIActionSheetDelegate>
+@interface ViewController : UIViewController
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-
-@property (strong, nonatomic) NSString *oauthToken;
-@property (strong, nonatomic) NSString *oauthTokenSecret;
 
 - (IBAction)loginUser:(id)sender;
 - (IBAction)logoutUser:(id)sender;
