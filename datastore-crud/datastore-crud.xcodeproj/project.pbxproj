@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1D24A61316CCACD600604C66 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D24A61216CCACD600604C66 /* CoreLocation.framework */; };
 		DE3425CC176124A30033B419 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = DE342595176124A30033B419 /* CHANGELOG.md */; };
-		DE3425CD176124A30033B419 /* libstackmob-v2.1.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3425CB176124A30033B419 /* libstackmob-v2.1.0.a */; };
+		DE3425CD176124A30033B419 /* libstackmob-v2.1.1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3425CB176124A30033B419 /* libstackmob-v2.1.1.a */; };
 		DEA55E8616190B2B00E7AB2B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA55E8516190B2B00E7AB2B /* UIKit.framework */; };
 		DEA55E8816190B2B00E7AB2B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA55E8716190B2B00E7AB2B /* Foundation.framework */; };
 		DEA55E8A16190B2B00E7AB2B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA55E8916190B2B00E7AB2B /* CoreGraphics.framework */; };
@@ -79,7 +79,7 @@
 		DE3425C8176124A30033B419 /* StackMobPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackMobPush.h; sourceTree = "<group>"; };
 		DE3425C9176124A30033B419 /* Synchronization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Synchronization.h; sourceTree = "<group>"; };
 		DE3425CA176124A30033B419 /* SystemInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemInformation.h; sourceTree = "<group>"; };
-		DE3425CB176124A30033B419 /* libstackmob-v2.1.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libstackmob-v2.1.0.a"; sourceTree = "<group>"; };
+		DE3425CB176124A30033B419 /* libstackmob-v2.1.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libstackmob-v2.1.1.a"; sourceTree = "<group>"; };
 		DEA55E8116190B2B00E7AB2B /* datastore-crud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "datastore-crud.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEA55E8516190B2B00E7AB2B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DEA55E8716190B2B00E7AB2B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -113,21 +113,21 @@
 				DEA55E8616190B2B00E7AB2B /* UIKit.framework in Frameworks */,
 				DEA55E8816190B2B00E7AB2B /* Foundation.framework in Frameworks */,
 				DEA55E8A16190B2B00E7AB2B /* CoreGraphics.framework in Frameworks */,
-				DE3425CD176124A30033B419 /* libstackmob-v2.1.0.a in Frameworks */,
+				DE3425CD176124A30033B419 /* libstackmob-v2.1.1.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DE342594176124A30033B419 /* StackMob-v2.1.0 */ = {
+		DE342594176124A30033B419 /* StackMob-v2.1.1 */ = {
 			isa = PBXGroup;
 			children = (
 				DE342595176124A30033B419 /* CHANGELOG.md */,
 				DE342596176124A30033B419 /* Headers */,
-				DE3425CB176124A30033B419 /* libstackmob-v2.1.0.a */,
+				DE3425CB176124A30033B419 /* libstackmob-v2.1.1.a */,
 			);
-			path = "StackMob-v2.1.0";
+			path = "StackMob-v2.1.1";
 			sourceTree = "<group>";
 		};
 		DE342596176124A30033B419 /* Headers */ = {
@@ -199,7 +199,7 @@
 		DEA55E7616190B2B00E7AB2B = {
 			isa = PBXGroup;
 			children = (
-				DE342594176124A30033B419 /* StackMob-v2.1.0 */,
+				DE342594176124A30033B419 /* StackMob-v2.1.1 */,
 				DEA55E8B16190B2B00E7AB2B /* datastore-crud */,
 				DEA55E8416190B2B00E7AB2B /* Frameworks */,
 				DEA55E8216190B2B00E7AB2B /* Products */,
@@ -410,7 +410,7 @@
 				INFOPLIST_FILE = "datastore-crud/datastore-crud-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/StackMob-v2.1.0\"",
+					"\"$(SRCROOT)/StackMob-v2.1.1\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -426,7 +426,7 @@
 				INFOPLIST_FILE = "datastore-crud/datastore-crud-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/StackMob-v2.1.0\"",
+					"\"$(SRCROOT)/StackMob-v2.1.1\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";

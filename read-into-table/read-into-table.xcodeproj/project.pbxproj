@@ -21,7 +21,7 @@
 		DEE2A44A165C16B10022391A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE2A449165C16B10022391A /* SystemConfiguration.framework */; };
 		DEE2A44D165C16B60022391A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE2A44C165C16B60022391A /* MobileCoreServices.framework */; };
 		DEE53FF01761703D00A1B192 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = DEE53FB91761703D00A1B192 /* CHANGELOG.md */; };
-		DEE53FF11761703D00A1B192 /* libstackmob-v2.1.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE53FEF1761703D00A1B192 /* libstackmob-v2.1.0.a */; };
+		DEE53FF11761703D00A1B192 /* libstackmob-v2.1.1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE53FEF1761703D00A1B192 /* libstackmob-v2.1.1.a */; };
 		DEE5C48C162F37010024001B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DEE5C48B162F37010024001B /* Default-568h@2x.png */; };
 		DEE5C48F162F370C0024001B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE5C48E162F370C0024001B /* Security.framework */; };
 /* End PBXBuildFile section */
@@ -97,7 +97,7 @@
 		DEE53FEC1761703D00A1B192 /* StackMobPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackMobPush.h; sourceTree = "<group>"; };
 		DEE53FED1761703D00A1B192 /* Synchronization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Synchronization.h; sourceTree = "<group>"; };
 		DEE53FEE1761703D00A1B192 /* SystemInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemInformation.h; sourceTree = "<group>"; };
-		DEE53FEF1761703D00A1B192 /* libstackmob-v2.1.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libstackmob-v2.1.0.a"; sourceTree = "<group>"; };
+		DEE53FEF1761703D00A1B192 /* libstackmob-v2.1.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libstackmob-v2.1.1.a"; sourceTree = "<group>"; };
 		DEE5C48B162F37010024001B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		DEE5C48E162F370C0024001B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -115,7 +115,7 @@
 				DE4BCB68161638D4003F4A66 /* UIKit.framework in Frameworks */,
 				DE4BCB6A161638D4003F4A66 /* Foundation.framework in Frameworks */,
 				DE4BCB6C161638D4003F4A66 /* CoreGraphics.framework in Frameworks */,
-				DEE53FF11761703D00A1B192 /* libstackmob-v2.1.0.a in Frameworks */,
+				DEE53FF11761703D00A1B192 /* libstackmob-v2.1.1.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,7 +125,7 @@
 		DE4BCB58161638D4003F4A66 = {
 			isa = PBXGroup;
 			children = (
-				DEE53FB81761703D00A1B192 /* StackMob-v2.1.0 */,
+				DEE53FB81761703D00A1B192 /* StackMob-v2.1.1 */,
 				DE4BCB6D161638D4003F4A66 /* read-into-table */,
 				DE4BCB66161638D4003F4A66 /* Frameworks */,
 				DE4BCB64161638D4003F4A66 /* Products */,
@@ -181,14 +181,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		DEE53FB81761703D00A1B192 /* StackMob-v2.1.0 */ = {
+		DEE53FB81761703D00A1B192 /* StackMob-v2.1.1 */ = {
 			isa = PBXGroup;
 			children = (
 				DEE53FB91761703D00A1B192 /* CHANGELOG.md */,
 				DEE53FBA1761703D00A1B192 /* Headers */,
-				DEE53FEF1761703D00A1B192 /* libstackmob-v2.1.0.a */,
+				DEE53FEF1761703D00A1B192 /* libstackmob-v2.1.1.a */,
 			);
-			path = "StackMob-v2.1.0";
+			path = "StackMob-v2.1.1";
 			sourceTree = "<group>";
 		};
 		DEE53FBA1761703D00A1B192 /* Headers */ = {
@@ -415,7 +415,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/StackMob-v2.1.0\"",
+					"\"$(SRCROOT)/StackMob-v2.1.1\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "read-into-table";
@@ -432,7 +432,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/StackMob-v2.1.0\"",
+					"\"$(SRCROOT)/StackMob-v2.1.1\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "read-into-table";

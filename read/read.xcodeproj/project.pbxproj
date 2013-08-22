@@ -21,7 +21,7 @@
 		DEE2A441165C16840022391A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE2A440165C16840022391A /* SystemConfiguration.framework */; };
 		DEE2A444165C16890022391A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE2A443165C16890022391A /* MobileCoreServices.framework */; };
 		DEE53FB61761701600A1B192 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = DEE53F7F1761701600A1B192 /* CHANGELOG.md */; };
-		DEE53FB71761701600A1B192 /* libstackmob-v2.1.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE53FB51761701600A1B192 /* libstackmob-v2.1.0.a */; };
+		DEE53FB71761701600A1B192 /* libstackmob-v2.1.1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE53FB51761701600A1B192 /* libstackmob-v2.1.1.a */; };
 		DEE5C483162F36DD0024001B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DEE5C482162F36DD0024001B /* Default-568h@2x.png */; };
 		DEE5C486162F36E50024001B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE5C485162F36E50024001B /* Security.framework */; };
 /* End PBXBuildFile section */
@@ -97,7 +97,7 @@
 		DEE53FB21761701600A1B192 /* StackMobPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackMobPush.h; sourceTree = "<group>"; };
 		DEE53FB31761701600A1B192 /* Synchronization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Synchronization.h; sourceTree = "<group>"; };
 		DEE53FB41761701600A1B192 /* SystemInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemInformation.h; sourceTree = "<group>"; };
-		DEE53FB51761701600A1B192 /* libstackmob-v2.1.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libstackmob-v2.1.0.a"; sourceTree = "<group>"; };
+		DEE53FB51761701600A1B192 /* libstackmob-v2.1.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libstackmob-v2.1.1.a"; sourceTree = "<group>"; };
 		DEE5C482162F36DD0024001B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		DEE5C485162F36E50024001B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -115,7 +115,7 @@
 				DE4BCB68161638D4003F4A66 /* UIKit.framework in Frameworks */,
 				DE4BCB6A161638D4003F4A66 /* Foundation.framework in Frameworks */,
 				DE4BCB6C161638D4003F4A66 /* CoreGraphics.framework in Frameworks */,
-				DEE53FB71761701600A1B192 /* libstackmob-v2.1.0.a in Frameworks */,
+				DEE53FB71761701600A1B192 /* libstackmob-v2.1.1.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,7 +125,7 @@
 		DE4BCB58161638D4003F4A66 = {
 			isa = PBXGroup;
 			children = (
-				DEE53F7E1761701600A1B192 /* StackMob-v2.1.0 */,
+				DEE53F7E1761701600A1B192 /* StackMob-v2.1.1 */,
 				DE4BCB6D161638D4003F4A66 /* read */,
 				DE4BCB66161638D4003F4A66 /* Frameworks */,
 				DE4BCB64161638D4003F4A66 /* Products */,
@@ -181,14 +181,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		DEE53F7E1761701600A1B192 /* StackMob-v2.1.0 */ = {
+		DEE53F7E1761701600A1B192 /* StackMob-v2.1.1 */ = {
 			isa = PBXGroup;
 			children = (
 				DEE53F7F1761701600A1B192 /* CHANGELOG.md */,
 				DEE53F801761701600A1B192 /* Headers */,
-				DEE53FB51761701600A1B192 /* libstackmob-v2.1.0.a */,
+				DEE53FB51761701600A1B192 /* libstackmob-v2.1.1.a */,
 			);
-			path = "StackMob-v2.1.0";
+			path = "StackMob-v2.1.1";
 			sourceTree = "<group>";
 		};
 		DEE53F801761701600A1B192 /* Headers */ = {
@@ -414,7 +414,7 @@
 				INFOPLIST_FILE = "read/read-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/StackMob-v2.1.0\"",
+					"\"$(SRCROOT)/StackMob-v2.1.1\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = read;
@@ -430,7 +430,7 @@
 				INFOPLIST_FILE = "read/read-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/StackMob-v2.1.0\"",
+					"\"$(SRCROOT)/StackMob-v2.1.1\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = read;
